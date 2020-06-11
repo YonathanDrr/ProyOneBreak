@@ -71,6 +71,7 @@ namespace Presentation
         {
             if (TxtRutCli.Text.Trim() == "")
             {
+
                 var userClient = new UserClient(
                        rutCliente: TxtRutCli.Text,
                        razonSocial:TxtRazonSo.Text,
