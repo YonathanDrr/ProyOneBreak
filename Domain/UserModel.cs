@@ -20,8 +20,10 @@ namespace Domain
         private string lastName;
         private string position;
         private string email;
+       
 
-      // Constructor con parámetros
+
+        // Constructor con parámetros
         public UserModel(int idUser, string loginName, string password, string firstName, string lastName, string position, string email)
         {
             this.idUser = idUser;
@@ -31,9 +33,11 @@ namespace Domain
             this.lastName = lastName;
             this.position = position;
             this.email = email;
+         
         }
 
-       // Constructor sin parámetros
+      
+        // Constructor sin parámetros
         public UserModel()
         {
         }
@@ -66,6 +70,9 @@ namespace Domain
                 return "[ : ( ]  Nombre de usuario ya está registrado, pruebe con otro"+ex;
             }
         }
+
+
+      
 
         //Editar perfil de usuario
         public string editUserProfile()

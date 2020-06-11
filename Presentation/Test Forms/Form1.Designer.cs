@@ -36,8 +36,8 @@
             this.btnEliminarC = new System.Windows.Forms.Button();
             this.TxtRutCli = new System.Windows.Forms.TextBox();
             this.TxtRazonSo = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtEmpresa = new System.Windows.Forms.TextBox();
+            this.TxtActividad = new System.Windows.Forms.TextBox();
             this.TxtDireccionCli = new System.Windows.Forms.TextBox();
             this.TxtTelefonoCli = new System.Windows.Forms.TextBox();
             this.TxtNombreCli = new System.Windows.Forms.TextBox();
@@ -106,6 +106,7 @@
             this.btnAgregarC.TabIndex = 39;
             this.btnAgregarC.Text = "Agregar";
             this.btnAgregarC.UseVisualStyleBackColor = false;
+            this.btnAgregarC.Click += new System.EventHandler(this.btnAgregarC_Click);
             // 
             // btnEditarC
             // 
@@ -141,6 +142,7 @@
             this.TxtRutCli.Name = "TxtRutCli";
             this.TxtRutCli.Size = new System.Drawing.Size(194, 23);
             this.TxtRutCli.TabIndex = 42;
+            this.TxtRutCli.TextChanged += new System.EventHandler(this.TxtRutCli_TextChanged);
             // 
             // TxtRazonSo
             // 
@@ -148,20 +150,23 @@
             this.TxtRazonSo.Name = "TxtRazonSo";
             this.TxtRazonSo.Size = new System.Drawing.Size(194, 23);
             this.TxtRazonSo.TabIndex = 43;
+            this.TxtRazonSo.TextChanged += new System.EventHandler(this.TxtRazonSo_TextChanged);
             // 
-            // textBox3
+            // TxtEmpresa
             // 
-            this.textBox3.Location = new System.Drawing.Point(146, 155);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(194, 23);
-            this.textBox3.TabIndex = 44;
+            this.TxtEmpresa.Location = new System.Drawing.Point(146, 155);
+            this.TxtEmpresa.Name = "TxtEmpresa";
+            this.TxtEmpresa.Size = new System.Drawing.Size(194, 23);
+            this.TxtEmpresa.TabIndex = 44;
+            this.TxtEmpresa.TextChanged += new System.EventHandler(this.TxtEmpresa_TextChanged);
             // 
-            // textBox4
+            // TxtActividad
             // 
-            this.textBox4.Location = new System.Drawing.Point(146, 201);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(194, 23);
-            this.textBox4.TabIndex = 45;
+            this.TxtActividad.Location = new System.Drawing.Point(146, 201);
+            this.TxtActividad.Name = "TxtActividad";
+            this.TxtActividad.Size = new System.Drawing.Size(194, 23);
+            this.TxtActividad.TabIndex = 45;
+            this.TxtActividad.TextChanged += new System.EventHandler(this.TxtActividad_TextChanged);
             // 
             // TxtDireccionCli
             // 
@@ -169,6 +174,7 @@
             this.TxtDireccionCli.Name = "TxtDireccionCli";
             this.TxtDireccionCli.Size = new System.Drawing.Size(171, 23);
             this.TxtDireccionCli.TabIndex = 49;
+            this.TxtDireccionCli.TextChanged += new System.EventHandler(this.TxtDireccionCli_TextChanged);
             // 
             // TxtTelefonoCli
             // 
@@ -176,6 +182,7 @@
             this.TxtTelefonoCli.Name = "TxtTelefonoCli";
             this.TxtTelefonoCli.Size = new System.Drawing.Size(171, 23);
             this.TxtTelefonoCli.TabIndex = 48;
+            this.TxtTelefonoCli.TextChanged += new System.EventHandler(this.TxtTelefonoCli_TextChanged);
             // 
             // TxtNombreCli
             // 
@@ -183,6 +190,7 @@
             this.TxtNombreCli.Name = "TxtNombreCli";
             this.TxtNombreCli.Size = new System.Drawing.Size(171, 23);
             this.TxtNombreCli.TabIndex = 47;
+            this.TxtNombreCli.TextChanged += new System.EventHandler(this.TxtNombreCli_TextChanged);
             // 
             // TxtEmailCli
             // 
@@ -190,6 +198,7 @@
             this.TxtEmailCli.Name = "TxtEmailCli";
             this.TxtEmailCli.Size = new System.Drawing.Size(171, 23);
             this.TxtEmailCli.TabIndex = 46;
+            this.TxtEmailCli.TextChanged += new System.EventHandler(this.TxtEmailCli_TextChanged);
             // 
             // label2
             // 
@@ -291,8 +300,8 @@
             this.Controls.Add(this.TxtTelefonoCli);
             this.Controls.Add(this.TxtNombreCli);
             this.Controls.Add(this.TxtEmailCli);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TxtActividad);
+            this.Controls.Add(this.TxtEmpresa);
             this.Controls.Add(this.TxtRazonSo);
             this.Controls.Add(this.TxtRutCli);
             this.Controls.Add(this.btnEliminarC);
@@ -325,8 +334,8 @@
         private System.Windows.Forms.Button btnEliminarC;
         private System.Windows.Forms.TextBox TxtRutCli;
         private System.Windows.Forms.TextBox TxtRazonSo;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtEmpresa;
+        private System.Windows.Forms.TextBox TxtActividad;
         private System.Windows.Forms.TextBox TxtDireccionCli;
         private System.Windows.Forms.TextBox TxtTelefonoCli;
         private System.Windows.Forms.TextBox TxtNombreCli;

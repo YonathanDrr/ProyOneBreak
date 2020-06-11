@@ -67,6 +67,30 @@ namespace DataAccess.SqlServer
             }
         }
 
+        //Registrar nuevo cliente
+        public int registerCli(string rutCliente, string razonSocial, string nombreCli, string email, string direccion, string telefono, string actividadEmp,string tipoEmp)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "insert into cliente values( @rutCliente, @razonSocial, @nombreContacto, @email,@direccion, @telefono ,@idactividadempresa,@idtipoempresa)";
+                    command.Parameters.AddWithValue("@rutCliente", rutCliente);
+                    command.Parameters.AddWithValue("@razonSocial", razonSocial);
+                    command.Parameters.AddWithValue("@nombreContacto", nombreCli);
+                    command.Parameters.AddWithValue("@email", email);
+                    command.Parameters.AddWithValue("@direccion", direccion);
+                    command.Parameters.AddWithValue("@telefono", telefono);
+                    command.Parameters.AddWithValue("@idactividadempresa", actividadEmp);
+                    command.Parameters.AddWithValue("@idtipoempresa", tipoEmp);
+                    command.CommandType = CommandType.Text;
+                    return command.ExecuteNonQuery();
+                }
+            }
+        }
+
         //Editar perfil de usuario
         public int editProfile(int id, string user, string pass, string name, string lastName, string mail)
         {

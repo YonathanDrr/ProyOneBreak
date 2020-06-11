@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
+using System.Windows.Forms;
+using Domain;
+using System.Runtime.InteropServices;
+
 
 namespace Presentation
 {
@@ -59,6 +63,74 @@ namespace Presentation
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarC_Click(object sender, EventArgs e)
+        {
+            if (TxtRutCli.Text.Trim() == "")
+            {
+                var userClient = new UserClient(
+                       rutCliente: TxtRutCli.Text,
+                       razonSocial:TxtRazonSo.Text,
+                       nombreCli: TxtNombreCli.Text,
+                       email: TxtEmailCli.Text,
+                       direccion: TxtDireccionCli.Text,
+                       telefono: TxtTelefonoCli.Text,
+                       actividadEmp: TxtActividad.Text,
+                       tipoEmp: TxtEmpresa.Text
+                    );
+                string result = userClient.registerCliente();
+                MessageBox.Show(result);
+                if (userClient.validUser == true)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    TxtRutCli.Focus();
+                }
+            }
+           
+        }
+
+        private void TxtRutCli_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtRazonSo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtEmpresa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtActividad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtEmailCli_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNombreCli_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtTelefonoCli_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtDireccionCli_TextChanged(object sender, EventArgs e)
         {
 
         }
