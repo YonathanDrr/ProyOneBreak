@@ -11,7 +11,7 @@ namespace DataAccess.SqlServer
 {
     public class UserDao : ConnectionToSql
     {
-        //validate user or email and password when starting session.//validar usuario o email y contraseña al iniciar sesion
+        //validar usuario o email y contraseña al iniciar sesion
         public bool Login(string user, string pass)
         {
             using (var connection = GetConnection())
@@ -27,10 +27,10 @@ namespace DataAccess.SqlServer
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
-                        while (reader.Read()) //We obtain the data from the column and assign to the active user fields in cache./Obtenemos los datos de la columna y asignamos a los campos de usuario activo en cache
+                        while (reader.Read()) //Obtenemos los datos de la columna y asignamos a los campos de usuario activo en cache
                         {
-                            UserCache.IdUser = reader.GetInt32(0); //User ID is in column 0 of the Users table./ID usuario esta en la columna 0 de la tabla Usuarios.
-                            UserCache.LoginName = reader.GetString(1);//Login name Is in column 1 of the users table./Nombre de inicio de sesion esta en la columna 1 de la tabla usuarios
+                            UserCache.IdUser = reader.GetInt32(0); //ID usuario esta en la columna 0 de la tabla Usuarios.
+                            UserCache.LoginName = reader.GetString(1);//Nombre de inicio de sesion esta en la columna 1 de la tabla usuarios
                             UserCache.Password = reader.GetString(2);
                             UserCache.FirstName = reader.GetString(3); 
                             UserCache.LastName = reader.GetString(4);
@@ -45,7 +45,7 @@ namespace DataAccess.SqlServer
             }
         }
 
-        //Register new user. //Registrar nuevo usuario
+        //Registrar nuevo usuario
         public int register(string user, string pass, string name, string lastName, string position, string mail)
         {
             using (var connection = GetConnection())
@@ -67,7 +67,7 @@ namespace DataAccess.SqlServer
             }
         }
 
-        //Edit user profile.//Editar perfil de usuario
+        //Editar perfil de usuario
         public int editProfile(int id, string user, string pass, string name, string lastName, string mail)
         {
             using (var connection = GetConnection())
@@ -89,7 +89,7 @@ namespace DataAccess.SqlServer
             }
         }
 
-        //Request to recover the user's password to the database.//Solicitar recuperar contraseña del usuario a la base de datos.
+        //Solicitar recuperar contraseña del usuario a la base de datos.
         public string recoverPassword(string userRequesting)
         {
             using (var connection = GetConnection())
@@ -128,7 +128,7 @@ namespace DataAccess.SqlServer
             }
         }
 
-        //Main security of the application for start of session.//Seguridad principal de aplicacion para inicio de sesion
+        //Seguridad principal de aplicacion para inicio de sesion
         public bool existsUser(int id, string loginName, string pass)
         {
             using (var connection = GetConnection())
