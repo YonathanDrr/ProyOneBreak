@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace Presentation.Test_Forms
 {
-    public partial class Form3 : Form
+    public partial class ListadoContratos : Form
     {
-        public Form3()
+        public ListadoContratos()
         {
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void btnListarContra_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -233,7 +233,7 @@ namespace Presentation
 
         private void btnCalendar_Click(object sender, EventArgs e)
         {
-            openFormOnPanel<Test_Forms.Form3>();
+            openFormOnPanel<Test_Forms.CrearEventos>();
             btnCalendar.BackColor = Color.FromArgb(0, 100, 182);
         }
 
@@ -246,7 +246,17 @@ namespace Presentation
           
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openFormOnPanel<Test_Forms.ListadoContratos>();
+            button2.BackColor = Color.FromArgb(0, 100, 182);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFormOnPanel<Test_Forms.ListadoClientes>();
+            button1.BackColor = Color.FromArgb(0, 100, 182);
+        }
 
         private void ptbProfile_Click(object sender, EventArgs e)
         {

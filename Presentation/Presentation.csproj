@@ -56,23 +56,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test Forms\Form1.cs">
+    <Compile Include="Test Forms\AdmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Test Forms\AdmClientes.Designer.cs">
+      <DependentUpon>AdmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test Forms\Form2.cs">
+    <Compile Include="Test Forms\AdmContratos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test Forms\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Test Forms\AdmContratos.Designer.cs">
+      <DependentUpon>AdmContratos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test Forms\Form3.cs">
+    <Compile Include="Test Forms\CrearEventos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test Forms\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Test Forms\CrearEventos.Designer.cs">
+      <DependentUpon>CrearEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test Forms\ListadoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Forms\ListadoClientes.Designer.cs">
+      <DependentUpon>ListadoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test Forms\ListadoContratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Forms\ListadoContratos.Designer.cs">
+      <DependentUpon>ListadoContratos.cs</DependentUpon>
     </Compile>
     <Compile Include="User\FormCreateUser.cs">
       <SubType>Form</SubType>
@@ -118,14 +130,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Test Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Test Forms\AdmClientes.resx">
+      <DependentUpon>AdmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test Forms\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Test Forms\AdmContratos.resx">
+      <DependentUpon>AdmContratos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test Forms\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Test Forms\CrearEventos.resx">
+      <DependentUpon>CrearEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Forms\ListadoClientes.resx">
+      <DependentUpon>ListadoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Forms\ListadoContratos.resx">
+      <DependentUpon>ListadoContratos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\FormCreateUser.resx">
       <DependentUpon>FormCreateUser.cs</DependentUpon>

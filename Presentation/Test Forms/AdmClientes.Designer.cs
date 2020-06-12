@@ -77,9 +77,10 @@
             this.label1.Location = new System.Drawing.Point(379, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 24);
+            this.label1.Size = new System.Drawing.Size(222, 24);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Modulo clientes";
+            this.label1.Text = "Administrador de clientes";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // GridListado
             // 
@@ -96,7 +97,7 @@
             // btnAgregarC
             // 
             this.btnAgregarC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.btnAgregarC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
             this.btnAgregarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarC.ForeColor = System.Drawing.Color.White;
             this.btnAgregarC.Location = new System.Drawing.Point(726, 53);
@@ -111,7 +112,7 @@
             // btnEditarC
             // 
             this.btnEditarC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditarC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.btnEditarC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(114)))), ((int)(((byte)(31)))));
             this.btnEditarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarC.ForeColor = System.Drawing.Color.White;
             this.btnEditarC.Location = new System.Drawing.Point(726, 125);
@@ -285,7 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(928, 516);
             this.ControlBox = false;
             this.Controls.Add(this.label6);
