@@ -136,18 +136,18 @@ namespace DataAccess.SqlServer
 
                         var mailService = new MailServices.SystemSupportMail();
                         mailService.sendMail(
-                            subject: "SYSTEM: Password recovery request",
-                            body: "Hi, " + userName + "\nYou Requested to Recover your password.\n" +
-                            "your current password is: " + accountPassword +
-                            "\nHowever, we ask that you change your password inmediately once you enter the system.",
+                            subject: "SISTEMA: Solicitudes de recuperación de contraseña",
+                            body: "Hola, " + userName + "\nSolicitó recuperar su contraseña..\n" +
+                            "tu contraseña actual es: " + accountPassword +
+                            "\nSin embargo, le pedimos que cambie su contraseña inmediatamente una vez que ingrese al sistema",
                             recipientMail: new List<string> { userMail }
                             );
-                        return "Hi, " + userName + "\nYou Requested to Recover your password.\n" +
-                            "Please check your mail: " + userMail +
-                            "\nHowever, we ask that you change your password inmediately once you enter the system.";
+                        return "Hola, " + userName + "\nSolicite recuperar su contraseña.\n" +
+                            "Por favor revise su correo: " + userMail +
+                            "\nSin embargo, le pedimos que cambie su contraseña inmediatamente una vez que ingrese al sistema.";
                     }
                     else
-                        return "Sorry, you do not have an account with that mail or username";
+                        return "Lo sentimos, no tienes una cuenta con ese correo o nombre de usuario";
                 }
             }
         }

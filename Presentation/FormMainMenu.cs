@@ -144,12 +144,7 @@ namespace Presentation
                 //mas
 
             }
-            if (Application.OpenForms["Form3"] == null)
-            {
-               btnCalendar.BackColor = Color.FromArgb(37, 54, 75);
-                //mas
-
-            }
+            
             if (Application.OpenForms["FormUserProfile"] == null)
             {
                 timer1.Stop(); 
@@ -233,15 +228,14 @@ namespace Presentation
 
         private void btnCalendar_Click(object sender, EventArgs e)
         {
-            openFormOnPanel<Test_Forms.CrearEventos>();
-            btnCalendar.BackColor = Color.FromArgb(0, 100, 182);
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
-            openFormOnPanel<FormCreateUser>();
-            btnCalendar.BackColor = Color.FromArgb(0, 100, 182);
+           openFormOnPanel<FormCreateUser>();
+            button3.BackColor = Color.FromArgb(0, 100, 182);
 
           
         }

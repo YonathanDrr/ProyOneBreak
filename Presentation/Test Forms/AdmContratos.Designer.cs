@@ -59,7 +59,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.BtnAuxListar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -356,28 +355,12 @@
             this.label3.TabIndex = 51;
             this.label3.Text = "Observaciones";
             // 
-            // BtnAuxListar
-            // 
-            this.BtnAuxListar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAuxListar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
-            this.BtnAuxListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAuxListar.ForeColor = System.Drawing.Color.White;
-            this.BtnAuxListar.Location = new System.Drawing.Point(666, 184);
-            this.BtnAuxListar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.BtnAuxListar.Name = "BtnAuxListar";
-            this.BtnAuxListar.Size = new System.Drawing.Size(177, 42);
-            this.BtnAuxListar.TabIndex = 53;
-            this.BtnAuxListar.Text = "Aux Listar";
-            this.BtnAuxListar.UseVisualStyleBackColor = false;
-            this.BtnAuxListar.Click += new System.EventHandler(this.BtnAuxListar_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(872, 455);
-            this.Controls.Add(this.BtnAuxListar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.label13);
@@ -453,7 +436,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button BtnAuxListar;
         
     }
 }

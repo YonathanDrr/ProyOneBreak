@@ -7047,26 +7047,6 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="btnCalendar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAgCAYAAACGhPFEAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAHCAAABwgAc0Pm54AAAM9SURBVFhH7VhLaBNBGN4qze4m
-        VntQ9KIgKKIHRVHBx8mDiHoUPAmCgl7EFyJaH0tnJq3PQ0HUooLiQQKCB5Hiwdaa7ExifFELgoJW9CZV
-        0Zto/P7tNE2addNqN4m0H3zszvz/zHz7z+zMv2uMBBEmF1rcbbG4FDbPzDbOvIjZQrbZcbmG7LZwD1lc
-        bTPa7pkWS68jX2rjNS6DXC43apaF3ZqcY3P5xWTyLAmF8K8mU/NNLndbTPbZTO6346lVuO+C8IdT4t0z
-        4NNucvXZe8Ay8BNVjgYGaw0klymw12LuDhqEomgKeZ7ube6uhu0NeqozLmfrLSE/1jenlwz4yXavrV+f
-        BfQTVY7Uec5i6rol1KUg2kId9MQIeRKRv0D3USGXof17I5GYbDi5Sbh/G21OrSAbzQqi/cyvL480JsYe
-        Lmgk9ETHnMwsGigQTjZKguHfH4mrRRC+FVF/ifLRiFCLEf3bsGeM1uw0vf77zRZ3nm5dAhozdNE2V2sp
-        wiSYXkQIu2GK9CYvwkw6WPN7DEdNNZm7AX1exNJZqZv6oiKixxrjUzRejOOYzn2VJI35T6LRyR1cb1WS
-        ekxo8BcWxIk1PRqELxp7Lw6Lw2hRp2t8QdsitsIT2K+bMP1V3PLosBBSkZ/hdFq6tgSwXwF/Iv/owPUB
-        +Av5yTltLkF4ogcFM7eb/P4kGj47Yf+EDG+urtKZofxuM7VFVxUhHNGnkg0kGNN8NybUzEDRiCwyv9O6
-        mAfqkTSphC4WIRTRJksuwIBXDac30uh0NgaLVq8oF9HFPHCk78ISeaqLRQgn0gUoL1reBO/rYh6YqQwe
-        5rkuFqHqoimbg/3bYEIVbXaXonyN2tSsaMKAUPcx/LCDyB/I/LrouK5p0XkgbR30ozT1/xBdgAnRBRyb
-        F5GpjbQ16mIetS2ayyfe59YwDOTMqkMXi1B10d7vABww6HEooaJfClx+8BItH4QqmrI1TPNm8sMyWB/l
-        6eXaNATvQ1f2gK+xHA5Ywj2CB+mjNMBv2RBCE93gZKfD3gu+K2APRV67DIF+MTDJLaZc+DwCj9FvMm0t
-        QaiRDgvjUzTW6l6sv+2VpDfm34umL43q0U9UMHPGb0HeUmvZvJ+4AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnClinicalHistory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC0AAAAgCAYAAACGhPFEAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1

@@ -38,7 +38,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnCalendar = new System.Windows.Forms.Button();
             this.btnClinicalHistory = new System.Windows.Forms.Button();
             this.btnPacient = new System.Windows.Forms.Button();
             this.Panel1 = new System.Windows.Forms.Panel();
@@ -111,7 +110,6 @@
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.button3);
             this.panelMenu.Controls.Add(this.btnLogout);
-            this.panelMenu.Controls.Add(this.btnCalendar);
             this.panelMenu.Controls.Add(this.btnClinicalHistory);
             this.panelMenu.Controls.Add(this.btnPacient);
             this.panelMenu.Controls.Add(this.Panel1);
@@ -206,27 +204,6 @@
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnCalendar
-            // 
-            this.btnCalendar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalendar.FlatAppearance.BorderSize = 0;
-            this.btnCalendar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.btnCalendar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnCalendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalendar.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalendar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCalendar.Image = ((System.Drawing.Image)(resources.GetObject("btnCalendar.Image")));
-            this.btnCalendar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalendar.Location = new System.Drawing.Point(2, 345);
-            this.btnCalendar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCalendar.Name = "btnCalendar";
-            this.btnCalendar.Size = new System.Drawing.Size(240, 45);
-            this.btnCalendar.TabIndex = 15;
-            this.btnCalendar.Text = "Crear Evento";
-            this.btnCalendar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCalendar.UseVisualStyleBackColor = true;
-            this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
             // 
             // btnClinicalHistory
             // 
@@ -494,7 +471,6 @@
         internal System.Windows.Forms.PictureBox pictureBox4;
         internal System.Windows.Forms.Label lblPosition;
         internal System.Windows.Forms.Label lblUserName;
-        internal System.Windows.Forms.Button btnCalendar;
         internal System.Windows.Forms.Button btnClinicalHistory;
         internal System.Windows.Forms.Button btnPacient;
         internal System.Windows.Forms.Button btnLogout;

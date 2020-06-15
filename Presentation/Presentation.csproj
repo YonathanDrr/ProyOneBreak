@@ -68,12 +68,6 @@
     <Compile Include="Test Forms\AdmContratos.Designer.cs">
       <DependentUpon>AdmContratos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test Forms\CrearEventos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test Forms\CrearEventos.Designer.cs">
-      <DependentUpon>CrearEventos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Test Forms\ListadoClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,9 +129,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Test Forms\AdmContratos.resx">
       <DependentUpon>AdmContratos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test Forms\CrearEventos.resx">
-      <DependentUpon>CrearEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test Forms\ListadoClientes.resx">
       <DependentUpon>ListadoClientes.cs</DependentUpon>
