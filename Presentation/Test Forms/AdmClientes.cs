@@ -67,36 +67,40 @@ namespace Presentation
 
         }
 
+        /*
         private void btnAgregarC_Click(object sender, EventArgs e)
-        {
-            if (TxtRutCli.Text.Trim() == "")
+        { }*/
+          
+            private void btnAgregarC_Click(object sender, EventArgs e)
             {
+                if (TxtRutCli.Text.Trim() == "")
+                {
 
-                var userClient = new UserClient(
-                       rutCliente: TxtRutCli.Text,
-                       razonSocial:TxtRazonSo.Text,
-                       nombreCli: TxtNombreCli.Text,
-                       email: TxtEmailCli.Text,
-                       direccion: TxtDireccionCli.Text,
-                       telefono: TxtTelefonoCli.Text,
-                       actividadEmp: TxtActividad.Text,
-                       tipoEmp: TxtEmpresa.Text
-                    );
-                string result = userClient.registerCliente();
-                MessageBox.Show(result);
-                if (userClient.validUser == true)
-                {
-                    this.Close();
+                    var userClient = new UserClient(
+                           rutCliente: TxtRutCli.Text,
+                           razonSocial:TxtRazonSo.Text,
+                           nombreCli: TxtNombreCli.Text,
+                           email: TxtEmailCli.Text,
+                           direccion: TxtDireccionCli.Text,
+                           telefono: TxtTelefonoCli.Text,
+                           actividadEmp: TxtActividad.Text,
+                           tipoEmp: TxtEmpresa.Text
+                        );
+                    string result = userClient.registerCliente();
+                    MessageBox.Show(result);
+                    if (userClient.validUser == true)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        TxtRutCli.Focus();
+                    }
                 }
-                else
-                {
-                    TxtRutCli.Focus();
-                }
+
             }
-           
-        }
-
-        private void TxtRutCli_TextChanged(object sender, EventArgs e)
+             
+            private void TxtRutCli_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -106,15 +110,8 @@ namespace Presentation
 
         }
 
-        private void TxtEmpresa_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void TxtActividad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void TxtEmailCli_TextChanged(object sender, EventArgs e)
         {
@@ -137,6 +134,16 @@ namespace Presentation
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtActividad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtEmpresa_TextChanged(object sender, EventArgs e)
         {
 
         }

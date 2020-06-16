@@ -12,7 +12,7 @@ namespace DataAccess.SqlServer
         private readonly string connectionString;
 
         public ConnectionToSql() {
-            connectionString = "Server=localhost\\SQLEXPRESS;DataBase=OnBreak; integrated security= true";
+            connectionString = "Server=localhost\\SQLEXPRESS;DataBase=OnBreakv; integrated security= true";
         }
         protected SqlConnection GetConnection() {
             return new SqlConnection(connectionString);

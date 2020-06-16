@@ -36,8 +36,6 @@
             this.btnEliminarC = new System.Windows.Forms.Button();
             this.TxtRutCli = new System.Windows.Forms.TextBox();
             this.TxtRazonSo = new System.Windows.Forms.TextBox();
-            this.TxtEmpresa = new System.Windows.Forms.TextBox();
-            this.TxtActividad = new System.Windows.Forms.TextBox();
             this.TxtDireccionCli = new System.Windows.Forms.TextBox();
             this.TxtTelefonoCli = new System.Windows.Forms.TextBox();
             this.TxtNombreCli = new System.Windows.Forms.TextBox();
@@ -50,6 +48,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.TxtActividad = new System.Windows.Forms.TextBox();
+            this.TxtEmpresa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridListado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,22 +154,6 @@
             this.TxtRazonSo.Size = new System.Drawing.Size(194, 23);
             this.TxtRazonSo.TabIndex = 43;
             this.TxtRazonSo.TextChanged += new System.EventHandler(this.TxtRazonSo_TextChanged);
-            // 
-            // TxtEmpresa
-            // 
-            this.TxtEmpresa.Location = new System.Drawing.Point(146, 155);
-            this.TxtEmpresa.Name = "TxtEmpresa";
-            this.TxtEmpresa.Size = new System.Drawing.Size(194, 23);
-            this.TxtEmpresa.TabIndex = 44;
-            this.TxtEmpresa.TextChanged += new System.EventHandler(this.TxtEmpresa_TextChanged);
-            // 
-            // TxtActividad
-            // 
-            this.TxtActividad.Location = new System.Drawing.Point(146, 201);
-            this.TxtActividad.Name = "TxtActividad";
-            this.TxtActividad.Size = new System.Drawing.Size(194, 23);
-            this.TxtActividad.TabIndex = 45;
-            this.TxtActividad.TextChanged += new System.EventHandler(this.TxtActividad_TextChanged);
             // 
             // TxtDireccionCli
             // 
@@ -282,6 +268,38 @@
             this.label9.TabIndex = 54;
             this.label9.Text = "Direccion:";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(292, 239);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 58;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(165, 239);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 59;
+            // 
+            // TxtActividad
+            // 
+            this.TxtActividad.Location = new System.Drawing.Point(146, 198);
+            this.TxtActividad.Name = "TxtActividad";
+            this.TxtActividad.Size = new System.Drawing.Size(100, 23);
+            this.TxtActividad.TabIndex = 60;
+            this.TxtActividad.TextChanged += new System.EventHandler(this.TxtActividad_TextChanged);
+            // 
+            // TxtEmpresa
+            // 
+            this.TxtEmpresa.Location = new System.Drawing.Point(146, 155);
+            this.TxtEmpresa.Name = "TxtEmpresa";
+            this.TxtEmpresa.Size = new System.Drawing.Size(100, 23);
+            this.TxtEmpresa.TabIndex = 61;
+            this.TxtEmpresa.TextChanged += new System.EventHandler(this.TxtEmpresa_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -289,6 +307,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(928, 516);
             this.ControlBox = false;
+            this.Controls.Add(this.TxtEmpresa);
+            this.Controls.Add(this.TxtActividad);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -301,8 +323,6 @@
             this.Controls.Add(this.TxtTelefonoCli);
             this.Controls.Add(this.TxtNombreCli);
             this.Controls.Add(this.TxtEmailCli);
-            this.Controls.Add(this.TxtActividad);
-            this.Controls.Add(this.TxtEmpresa);
             this.Controls.Add(this.TxtRazonSo);
             this.Controls.Add(this.TxtRutCli);
             this.Controls.Add(this.btnEliminarC);
@@ -335,8 +355,6 @@
         private System.Windows.Forms.Button btnEliminarC;
         private System.Windows.Forms.TextBox TxtRutCli;
         private System.Windows.Forms.TextBox TxtRazonSo;
-        private System.Windows.Forms.TextBox TxtEmpresa;
-        private System.Windows.Forms.TextBox TxtActividad;
         private System.Windows.Forms.TextBox TxtDireccionCli;
         private System.Windows.Forms.TextBox TxtTelefonoCli;
         private System.Windows.Forms.TextBox TxtNombreCli;
@@ -349,6 +367,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox TxtActividad;
+        private System.Windows.Forms.TextBox TxtEmpresa;
     }
 }
 
