@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.GridListado = new System.Windows.Forms.DataGridView();
             this.btnAgregarC = new System.Windows.Forms.Button();
             this.btnEditarC = new System.Windows.Forms.Button();
             this.btnEliminarC = new System.Windows.Forms.Button();
@@ -48,11 +48,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.TxtActividad = new System.Windows.Forms.TextBox();
             this.TxtEmpresa = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.GridListado)).BeginInit();
+            this.ListarGridCliente = new System.Windows.Forms.DataGridView();
+            this.EliminarBtn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ListarClient1 = new System.Windows.Forms.Button();
+            this.boxTipoEmpresa = new System.Windows.Forms.ComboBox();
+            this.BoxActividad = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ListarGridCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -84,25 +87,13 @@
             this.label1.Text = "Administrador de clientes";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // GridListado
-            // 
-            this.GridListado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GridListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridListado.Location = new System.Drawing.Point(25, 269);
-            this.GridListado.Name = "GridListado";
-            this.GridListado.Size = new System.Drawing.Size(878, 226);
-            this.GridListado.TabIndex = 38;
-            this.GridListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridListado_CellContentClick);
-            // 
             // btnAgregarC
             // 
             this.btnAgregarC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregarC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
             this.btnAgregarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarC.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarC.Location = new System.Drawing.Point(726, 53);
+            this.btnAgregarC.Location = new System.Drawing.Point(726, 26);
             this.btnAgregarC.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnAgregarC.Name = "btnAgregarC";
             this.btnAgregarC.Size = new System.Drawing.Size(177, 42);
@@ -117,13 +108,14 @@
             this.btnEditarC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(114)))), ((int)(((byte)(31)))));
             this.btnEditarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarC.ForeColor = System.Drawing.Color.White;
-            this.btnEditarC.Location = new System.Drawing.Point(726, 125);
+            this.btnEditarC.Location = new System.Drawing.Point(726, 80);
             this.btnEditarC.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnEditarC.Name = "btnEditarC";
             this.btnEditarC.Size = new System.Drawing.Size(177, 42);
             this.btnEditarC.TabIndex = 40;
             this.btnEditarC.Text = "Editar";
             this.btnEditarC.UseVisualStyleBackColor = false;
+            this.btnEditarC.Click += new System.EventHandler(this.btnEditarC_Click);
             // 
             // btnEliminarC
             // 
@@ -131,17 +123,19 @@
             this.btnEliminarC.BackColor = System.Drawing.Color.Tomato;
             this.btnEliminarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarC.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarC.Location = new System.Drawing.Point(726, 201);
+            this.btnEliminarC.Location = new System.Drawing.Point(726, 194);
             this.btnEliminarC.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnEliminarC.Name = "btnEliminarC";
             this.btnEliminarC.Size = new System.Drawing.Size(177, 42);
             this.btnEliminarC.TabIndex = 41;
             this.btnEliminarC.Text = "Eliminar";
             this.btnEliminarC.UseVisualStyleBackColor = false;
+            this.btnEliminarC.Click += new System.EventHandler(this.btnEliminarC_Click);
             // 
             // TxtRutCli
             // 
             this.TxtRutCli.Location = new System.Drawing.Point(146, 60);
+            this.TxtRutCli.MaxLength = 10;
             this.TxtRutCli.Name = "TxtRutCli";
             this.TxtRutCli.Size = new System.Drawing.Size(194, 23);
             this.TxtRutCli.TabIndex = 42;
@@ -166,6 +160,7 @@
             // TxtTelefonoCli
             // 
             this.TxtTelefonoCli.Location = new System.Drawing.Point(492, 155);
+            this.TxtTelefonoCli.MaxLength = 10;
             this.TxtTelefonoCli.Name = "TxtTelefonoCli";
             this.TxtTelefonoCli.Size = new System.Drawing.Size(171, 23);
             this.TxtTelefonoCli.TabIndex = 48;
@@ -174,6 +169,7 @@
             // TxtNombreCli
             // 
             this.TxtNombreCli.Location = new System.Drawing.Point(492, 108);
+            this.TxtNombreCli.MaxLength = 50;
             this.TxtNombreCli.Name = "TxtNombreCli";
             this.TxtNombreCli.Size = new System.Drawing.Size(171, 23);
             this.TxtNombreCli.TabIndex = 47;
@@ -182,6 +178,7 @@
             // TxtEmailCli
             // 
             this.TxtEmailCli.Location = new System.Drawing.Point(492, 63);
+            this.TxtEmailCli.MaxLength = 50;
             this.TxtEmailCli.Name = "TxtEmailCli";
             this.TxtEmailCli.Size = new System.Drawing.Size(171, 23);
             this.TxtEmailCli.TabIndex = 46;
@@ -232,7 +229,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(22, 161);
+            this.label6.Location = new System.Drawing.Point(17, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 17);
             this.label6.TabIndex = 57;
@@ -268,37 +265,89 @@
             this.label9.TabIndex = 54;
             this.label9.Text = "Direccion:";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(292, 239);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 58;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(165, 239);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 59;
-            // 
             // TxtActividad
             // 
             this.TxtActividad.Location = new System.Drawing.Point(146, 198);
             this.TxtActividad.Name = "TxtActividad";
-            this.TxtActividad.Size = new System.Drawing.Size(100, 23);
+            this.TxtActividad.Size = new System.Drawing.Size(61, 23);
             this.TxtActividad.TabIndex = 60;
             this.TxtActividad.TextChanged += new System.EventHandler(this.TxtActividad_TextChanged);
             // 
             // TxtEmpresa
             // 
-            this.TxtEmpresa.Location = new System.Drawing.Point(146, 155);
+            this.TxtEmpresa.Location = new System.Drawing.Point(146, 156);
             this.TxtEmpresa.Name = "TxtEmpresa";
-            this.TxtEmpresa.Size = new System.Drawing.Size(100, 23);
+            this.TxtEmpresa.Size = new System.Drawing.Size(61, 23);
             this.TxtEmpresa.TabIndex = 61;
             this.TxtEmpresa.TextChanged += new System.EventHandler(this.TxtEmpresa_TextChanged);
+            // 
+            // ListarGridCliente
+            // 
+            this.ListarGridCliente.AllowUserToDeleteRows = false;
+            this.ListarGridCliente.AllowUserToResizeRows = false;
+            this.ListarGridCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListarGridCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EliminarBtn});
+            this.ListarGridCliente.Location = new System.Drawing.Point(12, 269);
+            this.ListarGridCliente.Name = "ListarGridCliente";
+            this.ListarGridCliente.Size = new System.Drawing.Size(904, 241);
+            this.ListarGridCliente.TabIndex = 62;
+            this.ListarGridCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListarGridCliente_CellDoubleClick);
+            // 
+            // EliminarBtn
+            // 
+            this.EliminarBtn.HeaderText = "Eliminar";
+            this.EliminarBtn.Image = ((System.Drawing.Image)(resources.GetObject("EliminarBtn.Image")));
+            this.EliminarBtn.Name = "EliminarBtn";
+            // 
+            // ListarClient1
+            // 
+            this.ListarClient1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ListarClient1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
+            this.ListarClient1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ListarClient1.ForeColor = System.Drawing.Color.White;
+            this.ListarClient1.Location = new System.Drawing.Point(726, 134);
+            this.ListarClient1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.ListarClient1.Name = "ListarClient1";
+            this.ListarClient1.Size = new System.Drawing.Size(177, 42);
+            this.ListarClient1.TabIndex = 63;
+            this.ListarClient1.Text = "Listar";
+            this.ListarClient1.UseVisualStyleBackColor = false;
+            this.ListarClient1.Click += new System.EventHandler(this.ListarClient1_Click);
+            // 
+            // boxTipoEmpresa
+            // 
+            this.boxTipoEmpresa.AccessibleDescription = "Tipo de empresa de donde proviene el cliente";
+            this.boxTipoEmpresa.FormatString = "N0";
+            this.boxTipoEmpresa.FormattingEnabled = true;
+            this.boxTipoEmpresa.Items.AddRange(new object[] {
+            "SPA",
+            "EIRL",
+            "Limitada",
+            "Sociedad Anónima"});
+            this.boxTipoEmpresa.Location = new System.Drawing.Point(240, 154);
+            this.boxTipoEmpresa.Name = "boxTipoEmpresa";
+            this.boxTipoEmpresa.Size = new System.Drawing.Size(121, 24);
+            this.boxTipoEmpresa.TabIndex = 64;
+            this.boxTipoEmpresa.SelectedIndexChanged += new System.EventHandler(this.boxTipoEmpresa_SelectedIndexChanged);
+            // 
+            // BoxActividad
+            // 
+            this.BoxActividad.FormatString = "N0";
+            this.BoxActividad.FormattingEnabled = true;
+            this.BoxActividad.Items.AddRange(new object[] {
+            "Agropecuaria",
+            "Minería",
+            "Manufactura",
+            "Comercio",
+            "Hotelería",
+            "Alimentos",
+            "Transporte",
+            "Servicios"});
+            this.BoxActividad.Location = new System.Drawing.Point(240, 201);
+            this.BoxActividad.Name = "BoxActividad";
+            this.BoxActividad.Size = new System.Drawing.Size(121, 24);
+            this.BoxActividad.TabIndex = 65;
             // 
             // Form1
             // 
@@ -307,10 +356,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(928, 516);
             this.ControlBox = false;
+            this.Controls.Add(this.BoxActividad);
+            this.Controls.Add(this.boxTipoEmpresa);
+            this.Controls.Add(this.ListarClient1);
+            this.Controls.Add(this.ListarGridCliente);
             this.Controls.Add(this.TxtEmpresa);
             this.Controls.Add(this.TxtActividad);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -328,7 +379,6 @@
             this.Controls.Add(this.btnEliminarC);
             this.Controls.Add(this.btnEditarC);
             this.Controls.Add(this.btnAgregarC);
-            this.Controls.Add(this.GridListado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCerrar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -340,7 +390,7 @@
             this.ShowIcon = false;
             this.Text = "modulo clientes";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GridListado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListarGridCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,7 +399,6 @@
         #endregion
         internal System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView GridListado;
         private System.Windows.Forms.Button btnAgregarC;
         private System.Windows.Forms.Button btnEditarC;
         private System.Windows.Forms.Button btnEliminarC;
@@ -367,10 +416,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox TxtActividad;
         private System.Windows.Forms.TextBox TxtEmpresa;
+        private System.Windows.Forms.DataGridView ListarGridCliente;
+        private System.Windows.Forms.Button ListarClient1;
+        private System.Windows.Forms.ComboBox boxTipoEmpresa;
+        private System.Windows.Forms.ComboBox BoxActividad;
+        private System.Windows.Forms.DataGridViewImageColumn EliminarBtn;
     }
 }
 

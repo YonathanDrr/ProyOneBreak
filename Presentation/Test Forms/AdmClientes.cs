@@ -11,12 +11,21 @@ using Common.Cache;
 using System.Windows.Forms;
 using Domain;
 using System.Runtime.InteropServices;
-
+using System.Data.SqlClient;
+using Microsoft.SqlServer.Server;
 
 namespace Presentation
 {
     public partial class Form1 : Form
     {
+
+
+
+        private string spa="1";
+        private string eirl = "2";
+        private string Ltda = "3";
+        private string sa = "4";
+
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +33,8 @@ namespace Presentation
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            MostrarClientes();
             ///Manage Permissions
             if (UserCache.Position == Positions.Recepcionista) {            
                 btnAgregarC.Enabled = false;
@@ -66,41 +77,260 @@ namespace Presentation
         {
 
         }
-
         /*
-        private void btnAgregarC_Click(object sender, EventArgs e)
-        { }*/
-          
-            private void btnAgregarC_Click(object sender, EventArgs e)
-            {
-                if (TxtRutCli.Text.Trim() == "")
-                {
+        SPA
+        EIRL
+        Limitada
+        Sociedad Anónima
+        */
 
-                    var userClient = new UserClient(
-                           rutCliente: TxtRutCli.Text,
-                           razonSocial:TxtRazonSo.Text,
-                           nombreCli: TxtNombreCli.Text,
-                           email: TxtEmailCli.Text,
-                           direccion: TxtDireccionCli.Text,
-                           telefono: TxtTelefonoCli.Text,
-                           actividadEmp: TxtActividad.Text,
-                           tipoEmp: TxtEmpresa.Text
-                        );
-                    string result = userClient.registerCliente();
-                    MessageBox.Show(result);
-                    if (userClient.validUser == true)
-                    {
-                        this.Close();
-                    }
-                    else
-                    {
-                        TxtRutCli.Focus();
-                    }
+        private void btnAgregarC_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (TxtRutCli.Text != "" && boxTipoEmpresa.Text == "SPA")
+                {
+                    boxTipoEmpresa.Text = spa;
+
+
+
+
+                    SqlConnection conn = new SqlConnection();
+                    conn.ConnectionString = Connect.Connection.conexion;
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand();
+
+                    cmd = new SqlCommand("InsertarCliente", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RutCliente", TxtRutCli.Text);
+                    cmd.Parameters.AddWithValue("@RazonSocial", TxtRazonSo.Text);
+                    cmd.Parameters.AddWithValue("@NombreContacto", TxtNombreCli.Text);
+                    cmd.Parameters.AddWithValue("@MailContacto", TxtEmailCli.Text);
+                    cmd.Parameters.AddWithValue("@Direccion", TxtDireccionCli.Text);
+                    cmd.Parameters.AddWithValue("@Telefono", TxtTelefonoCli.Text);
+                    cmd.Parameters.AddWithValue("@ActiEmpresa", TxtActividad.Text);
+                    cmd.Parameters.AddWithValue("@TipoEmpresa", spa);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Cliente Registrado correctamente");
+
+                    LimpiarTxt();
+                    MostrarClientes();
+
+
+
+
+                }
+                if (TxtRutCli.Text != "" && boxTipoEmpresa.Text == "EIRL")
+                {
+                    boxTipoEmpresa.Text = eirl;
+
+
+
+
+                    SqlConnection conn = new SqlConnection();
+                    conn.ConnectionString = Connect.Connection.conexion;
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand();
+
+                    cmd = new SqlCommand("InsertarCliente", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RutCliente", TxtRutCli.Text);
+                    cmd.Parameters.AddWithValue("@RazonSocial", TxtRazonSo.Text);
+                    cmd.Parameters.AddWithValue("@NombreContacto", TxtNombreCli.Text);
+                    cmd.Parameters.AddWithValue("@MailContacto", TxtEmailCli.Text);
+                    cmd.Parameters.AddWithValue("@Direccion", TxtDireccionCli.Text);
+                    cmd.Parameters.AddWithValue("@Telefono", TxtTelefonoCli.Text);
+                    cmd.Parameters.AddWithValue("@ActiEmpresa", TxtActividad.Text);
+                    cmd.Parameters.AddWithValue("@TipoEmpresa", eirl);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Cliente Registrado correctamente");
+
+                    LimpiarTxt();
+                    MostrarClientes();
+
+
+
+
+
+
+
+
+                }
+                if (TxtRutCli.Text != "" && boxTipoEmpresa.Text == "Limitada")
+                {
+                    boxTipoEmpresa.Text = Ltda;
+
+
+
+
+
+                    SqlConnection conn = new SqlConnection();
+                    conn.ConnectionString = Connect.Connection.conexion;
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand();
+
+                    cmd = new SqlCommand("InsertarCliente", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RutCliente", TxtRutCli.Text);
+                    cmd.Parameters.AddWithValue("@RazonSocial", TxtRazonSo.Text);
+                    cmd.Parameters.AddWithValue("@NombreContacto", TxtNombreCli.Text);
+                    cmd.Parameters.AddWithValue("@MailContacto", TxtEmailCli.Text);
+                    cmd.Parameters.AddWithValue("@Direccion", TxtDireccionCli.Text);
+                    cmd.Parameters.AddWithValue("@Telefono", TxtTelefonoCli.Text);
+                    cmd.Parameters.AddWithValue("@ActiEmpresa", TxtActividad.Text);
+                    cmd.Parameters.AddWithValue("@TipoEmpresa", Ltda);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Cliente Registrado correctamente");
+
+                    LimpiarTxt();
+                    MostrarClientes();
+
+
+
+
+
+                }
+                if (TxtRutCli.Text != "" && boxTipoEmpresa.Text == "Sociedad Anónima")
+                {
+                    boxTipoEmpresa.Text = sa;
+
+
+
+
+
+
+
+
+                    SqlConnection conn = new SqlConnection();
+                    conn.ConnectionString = Connect.Connection.conexion;
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand();
+
+                    cmd = new SqlCommand("InsertarCliente", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RutCliente", TxtRutCli.Text);
+                    cmd.Parameters.AddWithValue("@RazonSocial", TxtRazonSo.Text);
+                    cmd.Parameters.AddWithValue("@NombreContacto", TxtNombreCli.Text);
+                    cmd.Parameters.AddWithValue("@MailContacto", TxtEmailCli.Text);
+                    cmd.Parameters.AddWithValue("@Direccion", TxtDireccionCli.Text);
+                    cmd.Parameters.AddWithValue("@Telefono", TxtTelefonoCli.Text);
+                    cmd.Parameters.AddWithValue("@ActiEmpresa", TxtActividad.Text);
+                    cmd.Parameters.AddWithValue("@TipoEmpresa", sa);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Cliente Registrado correctamente");
+
+                    LimpiarTxt();
+                    MostrarClientes();
+
+
+
+
+
+
+                }
+                else
+
+                {
+                    MessageBox.Show("Todos los valores son obligatorios");
                 }
 
+
             }
-             
-            private void TxtRutCli_TextChanged(object sender, EventArgs e)
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+  
+
+        }
+
+        private void LimpiarTxt() 
+        {
+            TxtRutCli.Clear();
+            TxtRazonSo.Clear();
+            TxtNombreCli.Clear();
+            TxtEmailCli.Clear();
+            TxtDireccionCli.Clear();
+            TxtTelefonoCli.Clear();
+            TxtActividad.Clear();
+            TxtEmpresa.Clear();
+           
+        }
+
+        private void MostrarClientes() 
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection conn = new SqlConnection();
+                conn.ConnectionString = Connect.Connection.conexion;
+                conn.Open();
+                da = new SqlDataAdapter("ListarCliente", conn);
+                da.Fill(dt);
+                ListarGridCliente.DataSource = dt;
+                conn.Close();
+
+               // ListarGridCliente.Columns[1].Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+        }
+
+
+
+        private void btnEliminarC_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtRutCli.Text != "")
+                {
+                    SqlConnection conn = new SqlConnection();
+                    conn.ConnectionString = Connect.Connection.conexion;
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand();
+
+                    cmd = new SqlCommand("EliminarCliente", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RutCliente", TxtRutCli.Text);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Cliente Eliminado");
+                    MostrarClientes();
+
+
+                }
+                else
+
+                {
+                    MessageBox.Show("Los Clientes solo se pueden eliminar por RUT");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btnEditarC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtRutCli_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -125,7 +355,7 @@ namespace Presentation
 
         private void TxtTelefonoCli_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void TxtDireccionCli_TextChanged(object sender, EventArgs e)
@@ -147,5 +377,23 @@ namespace Presentation
         {
 
         }
+
+        private void ListarClient1_Click(object sender, EventArgs e)
+        {
+            MostrarClientes();
+        }
+
+        private void ListarGridCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void boxTipoEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
     }
 }
+
+

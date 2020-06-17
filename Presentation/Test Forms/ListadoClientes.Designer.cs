@@ -34,10 +34,10 @@
             this.btnListarCli = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ListarCliente2 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListarCliente2)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             this.btnBuscarCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(114)))), ((int)(((byte)(31)))));
             this.btnBuscarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCli.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarCli.Location = new System.Drawing.Point(565, 62);
+            this.btnBuscarCli.Location = new System.Drawing.Point(343, 58);
             this.btnBuscarCli.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnBuscarCli.Name = "btnBuscarCli";
             this.btnBuscarCli.Size = new System.Drawing.Size(104, 30);
@@ -68,13 +68,14 @@
             this.btnListarCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
             this.btnListarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarCli.ForeColor = System.Drawing.Color.White;
-            this.btnListarCli.Location = new System.Drawing.Point(332, 58);
+            this.btnListarCli.Location = new System.Drawing.Point(489, 58);
             this.btnListarCli.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnListarCli.Name = "btnListarCli";
             this.btnListarCli.Size = new System.Drawing.Size(104, 30);
             this.btnListarCli.TabIndex = 44;
             this.btnListarCli.Text = "Listar Clientes";
             this.btnListarCli.UseVisualStyleBackColor = false;
+            this.btnListarCli.Click += new System.EventHandler(this.btnListarCli_Click);
             // 
             // label1
             // 
@@ -98,17 +99,17 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "Rut Cliente";
             // 
-            // dataGridView1
+            // ListarCliente2
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 147);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(867, 284);
-            this.dataGridView1.TabIndex = 48;
+            this.ListarCliente2.AllowUserToAddRows = false;
+            this.ListarCliente2.AllowUserToResizeRows = false;
+            this.ListarCliente2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ListarCliente2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListarCliente2.Location = new System.Drawing.Point(16, 147);
+            this.ListarCliente2.Name = "ListarCliente2";
+            this.ListarCliente2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ListarCliente2.Size = new System.Drawing.Size(867, 284);
+            this.ListarCliente2.TabIndex = 48;
             // 
             // menuStrip1
             // 
@@ -129,6 +130,7 @@
             this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 20);
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // ListadoClientes
             // 
@@ -136,7 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(895, 443);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ListarCliente2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtBuscarRutCli);
             this.Controls.Add(this.btnBuscarCli);
@@ -147,7 +149,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ListadoClientes";
             this.Text = "ListadoClientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListarCliente2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -162,7 +164,7 @@
         private System.Windows.Forms.Button btnListarCli;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ListarCliente2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }

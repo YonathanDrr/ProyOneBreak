@@ -56,6 +56,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectionToSql.cs" />
+    <Compile Include="Connect\Connection.cs" />
     <Compile Include="Test Forms\AdmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
