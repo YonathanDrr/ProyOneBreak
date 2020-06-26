@@ -16,6 +16,8 @@ namespace Presentation.Test_Forms
         public ListadoClientes()
         {
             InitializeComponent();
+            MostrarClientes();
+
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -23,6 +25,7 @@ namespace Presentation.Test_Forms
            // BuscarClientes();
         }
 
+      
         private void BuscarClientes()
         {
            

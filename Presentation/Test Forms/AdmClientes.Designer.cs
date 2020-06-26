@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregarC = new System.Windows.Forms.Button();
@@ -48,13 +47,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.TxtActividad = new System.Windows.Forms.TextBox();
-            this.TxtEmpresa = new System.Windows.Forms.TextBox();
             this.ListarGridCliente = new System.Windows.Forms.DataGridView();
-            this.EliminarBtn = new System.Windows.Forms.DataGridViewImageColumn();
             this.ListarClient1 = new System.Windows.Forms.Button();
-            this.boxTipoEmpresa = new System.Windows.Forms.ComboBox();
             this.BoxActividad = new System.Windows.Forms.ComboBox();
+            this.BoxTipEmp = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ListarGridCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,7 +133,7 @@
             this.TxtRutCli.Location = new System.Drawing.Point(146, 60);
             this.TxtRutCli.MaxLength = 10;
             this.TxtRutCli.Name = "TxtRutCli";
-            this.TxtRutCli.Size = new System.Drawing.Size(194, 23);
+            this.TxtRutCli.Size = new System.Drawing.Size(121, 23);
             this.TxtRutCli.TabIndex = 42;
             this.TxtRutCli.TextChanged += new System.EventHandler(this.TxtRutCli_TextChanged);
             // 
@@ -145,7 +141,7 @@
             // 
             this.TxtRazonSo.Location = new System.Drawing.Point(146, 105);
             this.TxtRazonSo.Name = "TxtRazonSo";
-            this.TxtRazonSo.Size = new System.Drawing.Size(194, 23);
+            this.TxtRazonSo.Size = new System.Drawing.Size(121, 23);
             this.TxtRazonSo.TabIndex = 43;
             this.TxtRazonSo.TextChanged += new System.EventHandler(this.TxtRazonSo_TextChanged);
             // 
@@ -265,40 +261,16 @@
             this.label9.TabIndex = 54;
             this.label9.Text = "Direccion:";
             // 
-            // TxtActividad
-            // 
-            this.TxtActividad.Location = new System.Drawing.Point(146, 198);
-            this.TxtActividad.Name = "TxtActividad";
-            this.TxtActividad.Size = new System.Drawing.Size(61, 23);
-            this.TxtActividad.TabIndex = 60;
-            this.TxtActividad.TextChanged += new System.EventHandler(this.TxtActividad_TextChanged);
-            // 
-            // TxtEmpresa
-            // 
-            this.TxtEmpresa.Location = new System.Drawing.Point(146, 156);
-            this.TxtEmpresa.Name = "TxtEmpresa";
-            this.TxtEmpresa.Size = new System.Drawing.Size(61, 23);
-            this.TxtEmpresa.TabIndex = 61;
-            this.TxtEmpresa.TextChanged += new System.EventHandler(this.TxtEmpresa_TextChanged);
-            // 
             // ListarGridCliente
             // 
             this.ListarGridCliente.AllowUserToDeleteRows = false;
             this.ListarGridCliente.AllowUserToResizeRows = false;
             this.ListarGridCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListarGridCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EliminarBtn});
             this.ListarGridCliente.Location = new System.Drawing.Point(12, 269);
             this.ListarGridCliente.Name = "ListarGridCliente";
-            this.ListarGridCliente.Size = new System.Drawing.Size(904, 241);
+            this.ListarGridCliente.Size = new System.Drawing.Size(891, 241);
             this.ListarGridCliente.TabIndex = 62;
             this.ListarGridCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListarGridCliente_CellDoubleClick);
-            // 
-            // EliminarBtn
-            // 
-            this.EliminarBtn.HeaderText = "Eliminar";
-            this.EliminarBtn.Image = ((System.Drawing.Image)(resources.GetObject("EliminarBtn.Image")));
-            this.EliminarBtn.Name = "EliminarBtn";
             // 
             // ListarClient1
             // 
@@ -315,25 +287,9 @@
             this.ListarClient1.UseVisualStyleBackColor = false;
             this.ListarClient1.Click += new System.EventHandler(this.ListarClient1_Click);
             // 
-            // boxTipoEmpresa
-            // 
-            this.boxTipoEmpresa.AccessibleDescription = "Tipo de empresa de donde proviene el cliente";
-            this.boxTipoEmpresa.FormatString = "N0";
-            this.boxTipoEmpresa.FormattingEnabled = true;
-            this.boxTipoEmpresa.Items.AddRange(new object[] {
-            "SPA",
-            "EIRL",
-            "Limitada",
-            "Sociedad Anónima"});
-            this.boxTipoEmpresa.Location = new System.Drawing.Point(240, 154);
-            this.boxTipoEmpresa.Name = "boxTipoEmpresa";
-            this.boxTipoEmpresa.Size = new System.Drawing.Size(121, 24);
-            this.boxTipoEmpresa.TabIndex = 64;
-            this.boxTipoEmpresa.SelectedIndexChanged += new System.EventHandler(this.boxTipoEmpresa_SelectedIndexChanged);
-            // 
             // BoxActividad
             // 
-            this.BoxActividad.FormatString = "N0";
+            this.BoxActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BoxActividad.FormattingEnabled = true;
             this.BoxActividad.Items.AddRange(new object[] {
             "Agropecuaria",
@@ -344,10 +300,23 @@
             "Alimentos",
             "Transporte",
             "Servicios"});
-            this.BoxActividad.Location = new System.Drawing.Point(240, 201);
+            this.BoxActividad.Location = new System.Drawing.Point(146, 200);
             this.BoxActividad.Name = "BoxActividad";
             this.BoxActividad.Size = new System.Drawing.Size(121, 24);
             this.BoxActividad.TabIndex = 65;
+            // 
+            // BoxTipEmp
+            // 
+            this.BoxTipEmp.FormattingEnabled = true;
+            this.BoxTipEmp.Items.AddRange(new object[] {
+            "SPA",
+            "Sociedad An",
+            "Limitada",
+            "EIRL"});
+            this.BoxTipEmp.Location = new System.Drawing.Point(146, 155);
+            this.BoxTipEmp.Name = "BoxTipEmp";
+            this.BoxTipEmp.Size = new System.Drawing.Size(121, 24);
+            this.BoxTipEmp.TabIndex = 66;
             // 
             // Form1
             // 
@@ -356,12 +325,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(928, 516);
             this.ControlBox = false;
+            this.Controls.Add(this.BoxTipEmp);
             this.Controls.Add(this.BoxActividad);
-            this.Controls.Add(this.boxTipoEmpresa);
             this.Controls.Add(this.ListarClient1);
             this.Controls.Add(this.ListarGridCliente);
-            this.Controls.Add(this.TxtEmpresa);
-            this.Controls.Add(this.TxtActividad);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -416,13 +383,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox TxtActividad;
-        private System.Windows.Forms.TextBox TxtEmpresa;
         private System.Windows.Forms.DataGridView ListarGridCliente;
         private System.Windows.Forms.Button ListarClient1;
-        private System.Windows.Forms.ComboBox boxTipoEmpresa;
         private System.Windows.Forms.ComboBox BoxActividad;
-        private System.Windows.Forms.DataGridViewImageColumn EliminarBtn;
+        private System.Windows.Forms.ComboBox BoxTipEmp;
     }
 }
 

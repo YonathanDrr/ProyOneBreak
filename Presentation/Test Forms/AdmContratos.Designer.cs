@@ -33,7 +33,7 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtNroContrato = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -59,6 +59,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.BtnGenerar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -118,14 +119,17 @@
             this.btnEdit.TabIndex = 15;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // textBox1
+            // TxtNroContrato
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 66);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 23);
-            this.textBox1.TabIndex = 14;
+            this.TxtNroContrato.Enabled = false;
+            this.TxtNroContrato.Location = new System.Drawing.Point(109, 66);
+            this.TxtNroContrato.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TxtNroContrato.Name = "TxtNroContrato";
+            this.TxtNroContrato.ShortcutsEnabled = false;
+            this.TxtNroContrato.Size = new System.Drawing.Size(81, 23);
+            this.TxtNroContrato.TabIndex = 14;
             // 
             // btnAdd
             // 
@@ -140,6 +144,7 @@
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Agregar";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCerrar
             // 
@@ -159,7 +164,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(396, 136);
+            this.textBox4.Location = new System.Drawing.Point(419, 137);
             this.textBox4.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(111, 23);
@@ -167,7 +172,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(396, 101);
+            this.textBox5.Location = new System.Drawing.Point(419, 102);
             this.textBox5.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(111, 23);
@@ -175,7 +180,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(396, 66);
+            this.textBox6.Location = new System.Drawing.Point(419, 67);
             this.textBox6.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(111, 23);
@@ -191,7 +196,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(396, 238);
+            this.textBox10.Location = new System.Drawing.Point(419, 239);
             this.textBox10.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(111, 23);
@@ -199,7 +204,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(396, 203);
+            this.textBox11.Location = new System.Drawing.Point(419, 204);
             this.textBox11.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(111, 23);
@@ -207,7 +212,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(396, 168);
+            this.textBox12.Location = new System.Drawing.Point(419, 169);
             this.textBox12.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(111, 23);
@@ -285,7 +290,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(289, 239);
+            this.label8.Location = new System.Drawing.Point(312, 240);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 20);
             this.label8.TabIndex = 44;
@@ -296,7 +301,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(289, 204);
+            this.label9.Location = new System.Drawing.Point(312, 205);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 20);
             this.label9.TabIndex = 45;
@@ -307,7 +312,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(289, 169);
+            this.label10.Location = new System.Drawing.Point(312, 170);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(104, 20);
             this.label10.TabIndex = 46;
@@ -318,7 +323,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(289, 137);
+            this.label11.Location = new System.Drawing.Point(312, 138);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 20);
             this.label11.TabIndex = 47;
@@ -329,7 +334,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(289, 102);
+            this.label12.Location = new System.Drawing.Point(312, 103);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(82, 20);
             this.label12.TabIndex = 48;
@@ -340,7 +345,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(289, 67);
+            this.label13.Location = new System.Drawing.Point(312, 68);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 20);
             this.label13.TabIndex = 49;
@@ -348,10 +353,10 @@
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(630, 238);
+            this.textBox13.Location = new System.Drawing.Point(729, 205);
             this.textBox13.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(213, 23);
+            this.textBox13.Size = new System.Drawing.Size(127, 23);
             this.textBox13.TabIndex = 50;
             // 
             // label3
@@ -359,7 +364,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(517, 239);
+            this.label3.Location = new System.Drawing.Point(605, 208);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 51;
@@ -393,12 +398,28 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 53;
             // 
+            // BtnGenerar
+            // 
+            this.BtnGenerar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnGenerar.BackColor = System.Drawing.Color.Gray;
+            this.BtnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGenerar.ForeColor = System.Drawing.Color.White;
+            this.BtnGenerar.Location = new System.Drawing.Point(204, 60);
+            this.BtnGenerar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnGenerar.Name = "BtnGenerar";
+            this.BtnGenerar.Size = new System.Drawing.Size(78, 26);
+            this.BtnGenerar.TabIndex = 54;
+            this.BtnGenerar.Text = "Generar";
+            this.BtnGenerar.UseVisualStyleBackColor = false;
+            this.BtnGenerar.Click += new System.EventHandler(this.BtnGenerar_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(872, 455);
+            this.Controls.Add(this.BtnGenerar);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
@@ -428,7 +449,7 @@
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtNroContrato);
             this.Controls.Add(this.btnAdd);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -448,7 +469,7 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtNroContrato;
         private System.Windows.Forms.Button btnAdd;
         internal System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.TextBox textBox4;
@@ -474,5 +495,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button BtnGenerar;
     }
 }
