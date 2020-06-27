@@ -29,20 +29,16 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.TxtNroContrato = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.TxtAsistentes = new System.Windows.Forms.TextBox();
+            this.TxtHoraFin = new System.Windows.Forms.TextBox();
+            this.TxtHoraInicio = new System.Windows.Forms.TextBox();
+            this.RutClienteContrato = new System.Windows.Forms.TextBox();
+            this.TxtValorTotal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Fecha = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,11 +51,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.TxtObservaciones = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.BoxModalidad = new System.Windows.Forms.ComboBox();
+            this.BoxEvento = new System.Windows.Forms.ComboBox();
             this.BtnGenerar = new System.Windows.Forms.Button();
+            this.TxtMasPersonal = new System.Windows.Forms.ComboBox();
+            this.TimeInicio = new System.Windows.Forms.DateTimePicker();
+            this.TimeFin = new System.Windows.Forms.DateTimePicker();
+            this.BoxRealizado = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -75,14 +75,6 @@
             this.label1.Text = "Administracion de contrato";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(108, 133);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(111, 23);
-            this.textBox3.TabIndex = 18;
-            // 
             // btnRemove
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -97,14 +89,6 @@
             this.btnRemove.Text = "Eliminar";
             this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(108, 98);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(111, 23);
-            this.textBox2.TabIndex = 16;
             // 
             // btnEdit
             // 
@@ -162,61 +146,45 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // textBox4
+            // TxtAsistentes
             // 
-            this.textBox4.Location = new System.Drawing.Point(419, 137);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(111, 23);
-            this.textBox4.TabIndex = 31;
+            this.TxtAsistentes.Location = new System.Drawing.Point(419, 137);
+            this.TxtAsistentes.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TxtAsistentes.Name = "TxtAsistentes";
+            this.TxtAsistentes.Size = new System.Drawing.Size(111, 23);
+            this.TxtAsistentes.TabIndex = 31;
             // 
-            // textBox5
+            // TxtHoraFin
             // 
-            this.textBox5.Location = new System.Drawing.Point(419, 102);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(111, 23);
-            this.textBox5.TabIndex = 30;
+            this.TxtHoraFin.Location = new System.Drawing.Point(419, 102);
+            this.TxtHoraFin.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TxtHoraFin.Name = "TxtHoraFin";
+            this.TxtHoraFin.Size = new System.Drawing.Size(111, 23);
+            this.TxtHoraFin.TabIndex = 30;
             // 
-            // textBox6
+            // TxtHoraInicio
             // 
-            this.textBox6.Location = new System.Drawing.Point(419, 67);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(111, 23);
-            this.textBox6.TabIndex = 29;
+            this.TxtHoraInicio.Location = new System.Drawing.Point(419, 67);
+            this.TxtHoraInicio.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TxtHoraInicio.Name = "TxtHoraInicio";
+            this.TxtHoraInicio.Size = new System.Drawing.Size(111, 23);
+            this.TxtHoraInicio.TabIndex = 29;
             // 
-            // textBox9
+            // RutClienteContrato
             // 
-            this.textBox9.Location = new System.Drawing.Point(108, 168);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(111, 23);
-            this.textBox9.TabIndex = 32;
+            this.RutClienteContrato.Location = new System.Drawing.Point(108, 168);
+            this.RutClienteContrato.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.RutClienteContrato.Name = "RutClienteContrato";
+            this.RutClienteContrato.Size = new System.Drawing.Size(111, 23);
+            this.RutClienteContrato.TabIndex = 32;
             // 
-            // textBox10
+            // TxtValorTotal
             // 
-            this.textBox10.Location = new System.Drawing.Point(419, 239);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(111, 23);
-            this.textBox10.TabIndex = 37;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(419, 204);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(111, 23);
-            this.textBox11.TabIndex = 36;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(419, 169);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(111, 23);
-            this.textBox12.TabIndex = 35;
+            this.TxtValorTotal.Location = new System.Drawing.Point(419, 239);
+            this.TxtValorTotal.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TxtValorTotal.Name = "TxtValorTotal";
+            this.TxtValorTotal.Size = new System.Drawing.Size(111, 23);
+            this.TxtValorTotal.TabIndex = 37;
             // 
             // label2
             // 
@@ -351,52 +319,54 @@
             this.label13.TabIndex = 49;
             this.label13.Text = "Hora Inicio";
             // 
-            // textBox13
+            // TxtObservaciones
             // 
-            this.textBox13.Location = new System.Drawing.Point(729, 205);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(127, 23);
-            this.textBox13.TabIndex = 50;
+            this.TxtObservaciones.Location = new System.Drawing.Point(664, 205);
+            this.TxtObservaciones.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TxtObservaciones.Multiline = true;
+            this.TxtObservaciones.Name = "TxtObservaciones";
+            this.TxtObservaciones.Size = new System.Drawing.Size(179, 58);
+            this.TxtObservaciones.TabIndex = 50;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(605, 208);
+            this.label3.Location = new System.Drawing.Point(546, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 51;
             this.label3.Text = "Observaciones";
             // 
-            // comboBox1
+            // BoxModalidad
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Light Break",
-            "Journal Break",
+            this.BoxModalidad.FormattingEnabled = true;
+            this.BoxModalidad.Items.AddRange(new object[] {
+            "Ambient Cocktail",
+            "Celebración",
             "Day Break",
             "Ejecutiva",
-            "Celebración",
-            "Quick Cocktail",
-            "Ambient Cocktail"});
-            this.comboBox1.Location = new System.Drawing.Point(109, 204);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 52;
+            "Light Break",
+            "Journal Break",
+            "Quick Cocktail"});
+            this.BoxModalidad.Location = new System.Drawing.Point(109, 204);
+            this.BoxModalidad.Name = "BoxModalidad";
+            this.BoxModalidad.Size = new System.Drawing.Size(121, 24);
+            this.BoxModalidad.TabIndex = 52;
+            this.BoxModalidad.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // BoxEvento
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Coffe Break",
+            this.BoxEvento.FormattingEnabled = true;
+            this.BoxEvento.Items.AddRange(new object[] {
+            "Cenas",
             "Cocktail",
-            "Cenas"});
-            this.comboBox2.Location = new System.Drawing.Point(109, 239);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 53;
+            "Coffee Break"});
+            this.BoxEvento.Location = new System.Drawing.Point(109, 239);
+            this.BoxEvento.Name = "BoxEvento";
+            this.BoxEvento.Size = new System.Drawing.Size(121, 24);
+            this.BoxEvento.TabIndex = 53;
             // 
             // BtnGenerar
             // 
@@ -404,7 +374,7 @@
             this.BtnGenerar.BackColor = System.Drawing.Color.Gray;
             this.BtnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGenerar.ForeColor = System.Drawing.Color.White;
-            this.BtnGenerar.Location = new System.Drawing.Point(204, 60);
+            this.BtnGenerar.Location = new System.Drawing.Point(192, 62);
             this.BtnGenerar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.BtnGenerar.Name = "BtnGenerar";
             this.BtnGenerar.Size = new System.Drawing.Size(78, 26);
@@ -413,17 +383,55 @@
             this.BtnGenerar.UseVisualStyleBackColor = false;
             this.BtnGenerar.Click += new System.EventHandler(this.BtnGenerar_Click);
             // 
+            // TxtMasPersonal
+            // 
+            this.TxtMasPersonal.FormattingEnabled = true;
+            this.TxtMasPersonal.Location = new System.Drawing.Point(419, 169);
+            this.TxtMasPersonal.Name = "TxtMasPersonal";
+            this.TxtMasPersonal.Size = new System.Drawing.Size(111, 24);
+            this.TxtMasPersonal.TabIndex = 55;
+            // 
+            // TimeInicio
+            // 
+            this.TimeInicio.Location = new System.Drawing.Point(109, 103);
+            this.TimeInicio.Name = "TimeInicio";
+            this.TimeInicio.Size = new System.Drawing.Size(200, 23);
+            this.TimeInicio.TabIndex = 56;
+            // 
+            // TimeFin
+            // 
+            this.TimeFin.Location = new System.Drawing.Point(109, 138);
+            this.TimeFin.Name = "TimeFin";
+            this.TimeFin.Size = new System.Drawing.Size(200, 23);
+            this.TimeFin.TabIndex = 57;
+            // 
+            // BoxRealizado
+            // 
+            this.BoxRealizado.FormattingEnabled = true;
+            this.BoxRealizado.Items.AddRange(new object[] {
+            "Realizado",
+            "Aplazado",
+            "Rechazado"});
+            this.BoxRealizado.Location = new System.Drawing.Point(419, 204);
+            this.BoxRealizado.Name = "BoxRealizado";
+            this.BoxRealizado.Size = new System.Drawing.Size(111, 24);
+            this.BoxRealizado.TabIndex = 58;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(872, 455);
+            this.Controls.Add(this.BoxRealizado);
+            this.Controls.Add(this.TimeFin);
+            this.Controls.Add(this.TimeInicio);
+            this.Controls.Add(this.TxtMasPersonal);
             this.Controls.Add(this.BtnGenerar);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.BoxEvento);
+            this.Controls.Add(this.BoxModalidad);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.TxtObservaciones);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -436,18 +444,14 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Fecha);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.TxtValorTotal);
+            this.Controls.Add(this.RutClienteContrato);
+            this.Controls.Add(this.TxtAsistentes);
+            this.Controls.Add(this.TxtHoraFin);
+            this.Controls.Add(this.TxtHoraInicio);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.TxtNroContrato);
             this.Controls.Add(this.btnAdd);
@@ -465,20 +469,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.TextBox TxtNroContrato;
         private System.Windows.Forms.Button btnAdd;
         internal System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox TxtAsistentes;
+        private System.Windows.Forms.TextBox TxtHoraFin;
+        private System.Windows.Forms.TextBox TxtHoraInicio;
+        private System.Windows.Forms.TextBox RutClienteContrato;
+        private System.Windows.Forms.TextBox TxtValorTotal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Fecha;
         private System.Windows.Forms.Label label4;
@@ -491,10 +491,14 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox TxtObservaciones;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox BoxModalidad;
+        private System.Windows.Forms.ComboBox BoxEvento;
         private System.Windows.Forms.Button BtnGenerar;
+        private System.Windows.Forms.ComboBox TxtMasPersonal;
+        private System.Windows.Forms.DateTimePicker TimeInicio;
+        private System.Windows.Forms.DateTimePicker TimeFin;
+        private System.Windows.Forms.ComboBox BoxRealizado;
     }
 }

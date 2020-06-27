@@ -201,9 +201,10 @@ namespace Presentation
 
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show(ex.Message);
+             
+                MessageBox.Show("Usuario registra contrato Imposible Eliminar");
             }
 
         }
