@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
-using System.Windows.Forms;
-using Domain;
-using System.Runtime.InteropServices;
 using System.Data.SqlClient;
-using Microsoft.SqlServer.Server;
 
 namespace Presentation
 {
@@ -75,12 +65,7 @@ namespace Presentation
         {
 
         }
-        /*
-        SPA
-        EIRL
-        Limitada
-        Sociedad Anónima
-        */
+     
 
         private void btnAgregarC_Click(object sender, EventArgs e)
         {

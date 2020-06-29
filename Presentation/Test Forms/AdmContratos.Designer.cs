@@ -60,6 +60,7 @@
             this.TimeInicio = new System.Windows.Forms.DateTimePicker();
             this.TimeFin = new System.Windows.Forms.DateTimePicker();
             this.BoxRealizado = new System.Windows.Forms.ComboBox();
+            this.BtnCalcular = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -150,6 +151,7 @@
             // 
             this.TxtAsistentes.Location = new System.Drawing.Point(419, 137);
             this.TxtAsistentes.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TxtAsistentes.MaxLength = 2;
             this.TxtAsistentes.Name = "TxtAsistentes";
             this.TxtAsistentes.Size = new System.Drawing.Size(111, 23);
             this.TxtAsistentes.TabIndex = 31;
@@ -158,6 +160,7 @@
             // 
             this.TxtHoraFin.Location = new System.Drawing.Point(419, 102);
             this.TxtHoraFin.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TxtHoraFin.MaxLength = 5;
             this.TxtHoraFin.Name = "TxtHoraFin";
             this.TxtHoraFin.Size = new System.Drawing.Size(111, 23);
             this.TxtHoraFin.TabIndex = 30;
@@ -166,6 +169,7 @@
             // 
             this.TxtHoraInicio.Location = new System.Drawing.Point(419, 67);
             this.TxtHoraInicio.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TxtHoraInicio.MaxLength = 5;
             this.TxtHoraInicio.Name = "TxtHoraInicio";
             this.TxtHoraInicio.Size = new System.Drawing.Size(111, 23);
             this.TxtHoraInicio.TabIndex = 29;
@@ -174,12 +178,14 @@
             // 
             this.RutClienteContrato.Location = new System.Drawing.Point(108, 168);
             this.RutClienteContrato.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.RutClienteContrato.MaxLength = 10;
             this.RutClienteContrato.Name = "RutClienteContrato";
-            this.RutClienteContrato.Size = new System.Drawing.Size(111, 23);
+            this.RutClienteContrato.Size = new System.Drawing.Size(122, 23);
             this.RutClienteContrato.TabIndex = 32;
             // 
             // TxtValorTotal
             // 
+            this.TxtValorTotal.Enabled = false;
             this.TxtValorTotal.Location = new System.Drawing.Point(419, 239);
             this.TxtValorTotal.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.TxtValorTotal.Name = "TxtValorTotal";
@@ -323,6 +329,7 @@
             // 
             this.TxtObservaciones.Location = new System.Drawing.Point(664, 205);
             this.TxtObservaciones.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TxtObservaciones.MaxLength = 150;
             this.TxtObservaciones.Multiline = true;
             this.TxtObservaciones.Name = "TxtObservaciones";
             this.TxtObservaciones.Size = new System.Drawing.Size(179, 58);
@@ -386,6 +393,10 @@
             // TxtMasPersonal
             // 
             this.TxtMasPersonal.FormattingEnabled = true;
+            this.TxtMasPersonal.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4"});
             this.TxtMasPersonal.Location = new System.Drawing.Point(419, 169);
             this.TxtMasPersonal.Name = "TxtMasPersonal";
             this.TxtMasPersonal.Size = new System.Drawing.Size(111, 24);
@@ -417,12 +428,28 @@
             this.BoxRealizado.Size = new System.Drawing.Size(111, 24);
             this.BoxRealizado.TabIndex = 58;
             // 
+            // BtnCalcular
+            // 
+            this.BtnCalcular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCalcular.BackColor = System.Drawing.Color.Gray;
+            this.BtnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCalcular.ForeColor = System.Drawing.Color.White;
+            this.BtnCalcular.Location = new System.Drawing.Point(541, 237);
+            this.BtnCalcular.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnCalcular.Name = "BtnCalcular";
+            this.BtnCalcular.Size = new System.Drawing.Size(78, 26);
+            this.BtnCalcular.TabIndex = 59;
+            this.BtnCalcular.Text = "Calcular";
+            this.BtnCalcular.UseVisualStyleBackColor = false;
+            this.BtnCalcular.Click += new System.EventHandler(this.BtnCalcular_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(872, 455);
+            this.Controls.Add(this.BtnCalcular);
             this.Controls.Add(this.BoxRealizado);
             this.Controls.Add(this.TimeFin);
             this.Controls.Add(this.TimeInicio);
@@ -500,5 +527,6 @@
         private System.Windows.Forms.DateTimePicker TimeInicio;
         private System.Windows.Forms.DateTimePicker TimeFin;
         private System.Windows.Forms.ComboBox BoxRealizado;
+        private System.Windows.Forms.Button BtnCalcular;
     }
 }
