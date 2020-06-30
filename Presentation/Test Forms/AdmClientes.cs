@@ -300,20 +300,6 @@ namespace Presentation
         private void ListarGridCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
-
-           /*
-
-            TxtRutCli.Text = ListarGridCliente.SelectedCells[1].Value.ToString();
-            TxtRazonSo.Text = ListarGridCliente.SelectedCells[2].Value.ToString();
-            TxtNombreCli.Text = ListarGridCliente.SelectedCells[3].Value.ToString();
-            TxtEmailCli.Text = ListarGridCliente.SelectedCells[4].Value.ToString();
-            TxtDireccionCli.Text = ListarGridCliente.SelectedCells[5].Value.ToString();
-            TxtTelefonoCli.Text = ListarGridCliente.SelectedCells[6].Value.ToString();
-            BoxActividad.Text = ListarGridCliente.SelectedCells[7].Value.ToString();
-            BoxTipEmp.Text = ListarGridCliente.SelectedCells[8].Value.ToString();
-          */
-
-
         }
 
         private void boxTipoEmpresa_SelectedIndexChanged(object sender, EventArgs e)

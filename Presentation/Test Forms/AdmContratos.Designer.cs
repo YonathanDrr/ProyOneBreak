@@ -61,6 +61,8 @@
             this.TimeFin = new System.Windows.Forms.DateTimePicker();
             this.BoxRealizado = new System.Windows.Forms.ComboBox();
             this.BtnCalcular = new System.Windows.Forms.Button();
+            this.GridContrato = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.GridContrato)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +84,7 @@
             this.btnRemove.BackColor = System.Drawing.Color.Tomato;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(666, 133);
+            this.btnRemove.Location = new System.Drawing.Point(722, 133);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(177, 42);
@@ -97,7 +99,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(114)))), ((int)(((byte)(31)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEdit.Location = new System.Drawing.Point(666, 80);
+            this.btnEdit.Location = new System.Drawing.Point(722, 80);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(177, 42);
@@ -122,7 +124,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(666, 26);
+            this.btnAdd.Location = new System.Drawing.Point(722, 26);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(177, 42);
@@ -327,7 +329,7 @@
             // 
             // TxtObservaciones
             // 
-            this.TxtObservaciones.Location = new System.Drawing.Point(664, 205);
+            this.TxtObservaciones.Location = new System.Drawing.Point(722, 205);
             this.TxtObservaciones.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.TxtObservaciones.MaxLength = 150;
             this.TxtObservaciones.Multiline = true;
@@ -340,7 +342,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(546, 205);
+            this.label3.Location = new System.Drawing.Point(593, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 51;
@@ -381,7 +383,7 @@
             this.BtnGenerar.BackColor = System.Drawing.Color.Gray;
             this.BtnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGenerar.ForeColor = System.Drawing.Color.White;
-            this.BtnGenerar.Location = new System.Drawing.Point(192, 62);
+            this.BtnGenerar.Location = new System.Drawing.Point(224, 62);
             this.BtnGenerar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.BtnGenerar.Name = "BtnGenerar";
             this.BtnGenerar.Size = new System.Drawing.Size(78, 26);
@@ -434,7 +436,7 @@
             this.BtnCalcular.BackColor = System.Drawing.Color.Gray;
             this.BtnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCalcular.ForeColor = System.Drawing.Color.White;
-            this.BtnCalcular.Location = new System.Drawing.Point(541, 237);
+            this.BtnCalcular.Location = new System.Drawing.Point(565, 237);
             this.BtnCalcular.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.BtnCalcular.Name = "BtnCalcular";
             this.BtnCalcular.Size = new System.Drawing.Size(78, 26);
@@ -443,12 +445,21 @@
             this.BtnCalcular.UseVisualStyleBackColor = false;
             this.BtnCalcular.Click += new System.EventHandler(this.BtnCalcular_Click);
             // 
+            // GridContrato
+            // 
+            this.GridContrato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridContrato.Location = new System.Drawing.Point(5, 286);
+            this.GridContrato.Name = "GridContrato";
+            this.GridContrato.Size = new System.Drawing.Size(911, 229);
+            this.GridContrato.TabIndex = 60;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.ClientSize = new System.Drawing.Size(872, 455);
+            this.ClientSize = new System.Drawing.Size(928, 516);
+            this.Controls.Add(this.GridContrato);
             this.Controls.Add(this.BtnCalcular);
             this.Controls.Add(this.BoxRealizado);
             this.Controls.Add(this.TimeFin);
@@ -488,6 +499,7 @@
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GridContrato)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,5 +540,6 @@
         private System.Windows.Forms.DateTimePicker TimeFin;
         private System.Windows.Forms.ComboBox BoxRealizado;
         private System.Windows.Forms.Button BtnCalcular;
+        private System.Windows.Forms.DataGridView GridContrato;
     }
 }
