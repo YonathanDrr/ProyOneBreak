@@ -22,16 +22,11 @@ namespace Presentation.Test_Forms
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           // BuscarClientes();
+            BuscarCliente();
         }
 
       
-        private void BuscarClientes()
-        {
-           
-
-
-        }
+       
 
         private void MostrarClientes()
         {
@@ -47,7 +42,6 @@ namespace Presentation.Test_Forms
                 ListarCliente2.DataSource = dt;
                 conn.Close();
 
-                // ListarGridCliente.Columns[1].Visible = true;
             }
             catch (Exception ex)
             {
@@ -58,11 +52,53 @@ namespace Presentation.Test_Forms
 
         }
 
+        private void BuscarCliente()
+        {
+            try
+            {
+                if (TxtBuscarRutCli.Text != "")
+                {
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da;
+                    SqlConnection conn = new SqlConnection();
+                    conn.ConnectionString = Connect.Connection.conexion;
+                    conn.Open();
+                    da = new SqlDataAdapter("BuscarCliente", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.AddWithValue("@buscar", TxtBuscarRutCli.Text);
+                    da.Fill(dt);
+                    ListarCliente2.DataSource = dt;
+                    conn.Close();
+
+
+
+                }
+                else
+
+                {
+                    MessageBox.Show("Los Clientes solo se pueden buscar por RUT o Correo");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex+"No existe un usuario con ese rut");
+            }
+
+        }
+
         private void btnListarCli_Click(object sender, EventArgs e)
         {
 
             MostrarClientes();
 
+        }
+
+        private void btnBuscarCli_Click(object sender, EventArgs e)
+        {
+            BuscarCliente();
         }
     }
 }

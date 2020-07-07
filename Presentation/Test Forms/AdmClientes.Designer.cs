@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregarC = new System.Windows.Forms.Button();
@@ -51,7 +52,9 @@
             this.ListarClient1 = new System.Windows.Forms.Button();
             this.BoxActividad = new System.Windows.Forms.ComboBox();
             this.BoxTipEmp = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ListarGridCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -131,7 +134,7 @@
             // TxtRutCli
             // 
             this.TxtRutCli.Location = new System.Drawing.Point(146, 60);
-            this.TxtRutCli.MaxLength = 10;
+            this.TxtRutCli.MaxLength = 9;
             this.TxtRutCli.Name = "TxtRutCli";
             this.TxtRutCli.Size = new System.Drawing.Size(121, 23);
             this.TxtRutCli.TabIndex = 42;
@@ -148,6 +151,7 @@
             // TxtDireccionCli
             // 
             this.TxtDireccionCli.Location = new System.Drawing.Point(492, 201);
+            this.TxtDireccionCli.MaxLength = 20;
             this.TxtDireccionCli.Name = "TxtDireccionCli";
             this.TxtDireccionCli.Size = new System.Drawing.Size(171, 23);
             this.TxtDireccionCli.TabIndex = 49;
@@ -156,7 +160,7 @@
             // TxtTelefonoCli
             // 
             this.TxtTelefonoCli.Location = new System.Drawing.Point(492, 155);
-            this.TxtTelefonoCli.MaxLength = 10;
+            this.TxtTelefonoCli.MaxLength = 9;
             this.TxtTelefonoCli.Name = "TxtTelefonoCli";
             this.TxtTelefonoCli.Size = new System.Drawing.Size(171, 23);
             this.TxtTelefonoCli.TabIndex = 48;
@@ -318,6 +322,17 @@
             this.BoxTipEmp.Size = new System.Drawing.Size(121, 24);
             this.BoxTipEmp.TabIndex = 66;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(301, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 67;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,6 +340,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(928, 516);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BoxTipEmp);
             this.Controls.Add(this.BoxActividad);
             this.Controls.Add(this.ListarClient1);
@@ -358,6 +374,7 @@
             this.Text = "modulo clientes";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ListarGridCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,6 +404,7 @@
         private System.Windows.Forms.Button ListarClient1;
         private System.Windows.Forms.ComboBox BoxActividad;
         private System.Windows.Forms.ComboBox BoxTipEmp;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

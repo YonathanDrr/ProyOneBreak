@@ -37,8 +37,10 @@
             this.ListarCliente2 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ListarCliente2)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtBuscarRutCli
@@ -54,13 +56,14 @@
             this.btnBuscarCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(114)))), ((int)(((byte)(31)))));
             this.btnBuscarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCli.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarCli.Location = new System.Drawing.Point(343, 58);
+            this.btnBuscarCli.Location = new System.Drawing.Point(272, 58);
             this.btnBuscarCli.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnBuscarCli.Name = "btnBuscarCli";
             this.btnBuscarCli.Size = new System.Drawing.Size(104, 30);
             this.btnBuscarCli.TabIndex = 45;
             this.btnBuscarCli.Text = "Buscar Clientes";
             this.btnBuscarCli.UseVisualStyleBackColor = false;
+            this.btnBuscarCli.Click += new System.EventHandler(this.btnBuscarCli_Click);
             // 
             // btnListarCli
             // 
@@ -68,7 +71,7 @@
             this.btnListarCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
             this.btnListarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarCli.ForeColor = System.Drawing.Color.White;
-            this.btnListarCli.Location = new System.Drawing.Point(489, 58);
+            this.btnListarCli.Location = new System.Drawing.Point(390, 58);
             this.btnListarCli.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnListarCli.Name = "btnListarCli";
             this.btnListarCli.Size = new System.Drawing.Size(104, 30);
@@ -132,12 +135,24 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 20);
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(791, 32);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(81, 56);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 51;
+            this.pictureBox2.TabStop = false;
+            // 
             // ListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(895, 443);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.ListarCliente2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtBuscarRutCli);
@@ -152,6 +167,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ListarCliente2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +183,6 @@
         private System.Windows.Forms.DataGridView ListarCliente2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoContratos));
             this.label1 = new System.Windows.Forms.Label();
             this.btnListarContra = new System.Windows.Forms.Button();
             this.btnBuscarContra = new System.Windows.Forms.Button();
             this.TxtRutBuscarContrato = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.GridListadoContrato = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridListadoContrato)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -84,6 +87,7 @@
             this.TxtRutBuscarContrato.Name = "TxtRutBuscarContrato";
             this.TxtRutBuscarContrato.Size = new System.Drawing.Size(100, 20);
             this.TxtRutBuscarContrato.TabIndex = 42;
+            this.TxtRutBuscarContrato.TextChanged += new System.EventHandler(this.TxtRutBuscarContrato_TextChanged);
             // 
             // label2
             // 
@@ -104,12 +108,24 @@
             this.GridListadoContrato.Size = new System.Drawing.Size(871, 286);
             this.GridListadoContrato.TabIndex = 44;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(792, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
+            // 
             // ListadoContratos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(895, 443);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GridListadoContrato);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtRutBuscarContrato);
@@ -120,6 +136,7 @@
             this.Name = "ListadoContratos";
             this.Text = "ListadoContratos";
             ((System.ComponentModel.ISupportInitialize)(this.GridListadoContrato)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +150,6 @@
         private System.Windows.Forms.TextBox TxtRutBuscarContrato;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView GridListadoContrato;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
