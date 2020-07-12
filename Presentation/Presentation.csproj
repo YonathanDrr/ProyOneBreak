@@ -70,6 +70,24 @@
     <Compile Include="Test Forms\AdmContratos.Designer.cs">
       <DependentUpon>AdmContratos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test Forms\Cenas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Forms\Cenas.Designer.cs">
+      <DependentUpon>Cenas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test Forms\Cocktail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Forms\Cocktail.Designer.cs">
+      <DependentUpon>Cocktail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test Forms\CoffeBreak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Forms\CoffeBreak.Designer.cs">
+      <DependentUpon>CoffeBreak.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test Forms\ListadoClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +149,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Test Forms\AdmContratos.resx">
       <DependentUpon>AdmContratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Forms\Cenas.resx">
+      <DependentUpon>Cenas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Forms\Cocktail.resx">
+      <DependentUpon>Cocktail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Forms\CoffeBreak.resx">
+      <DependentUpon>CoffeBreak.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test Forms\ListadoClientes.resx">
       <DependentUpon>ListadoClientes.cs</DependentUpon>

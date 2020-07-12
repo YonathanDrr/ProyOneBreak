@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Common.Cache;
+using Presentation.Test_Forms;
+using System;
 using System.Data;
-using System.Windows.Forms;
-using Common.Cache;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 namespace Presentation
 {
     public partial class Form2 : Form
@@ -164,157 +165,155 @@ namespace Presentation
 
 
 
-            if (BoxEvento.Text == "Coffee Break")
-            {
-                if (TxtAsistentes.Text == "" || TxtMasPersonal.Text == "" || TxtHoraInicio.Text == "" || TxtHoraFin.Text == "" )
+                if (BoxEvento.Text == "Coffee Break")
+              {
+                
+                int ParseAsistentes = Int16.Parse(TxtAsistentes.Text);
+                var CoffeForms = new CoffeBreak();
+                        CoffeForms.ShowDialog();
+                if (ParseAsistentes >= 1 || ParseAsistentes <= 20)
                 {
+                    Double recargoPersonal = 0;
+                    var recargoCoffe = 3;
+                    int ParsePersonal = Int16.Parse(TxtMasPersonal.Text);
 
-                    MessageBox.Show("Todos los campos son Obligatorios");
+                    if (ParsePersonal == 2)
+                    {
 
+                        recargoPersonal = 2;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
+                        TxtValorTotal.Text = TotalUf.ToString();
+
+                    }
+                    if (ParsePersonal == 3)
+                    {
+
+                        recargoPersonal = 3;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
+                        TxtValorTotal.Text = TotalUf.ToString();
+
+                    }
+                    if (ParsePersonal == 4)
+                    {
+
+                        recargoPersonal = 3.5;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
+                        TxtValorTotal.Text = TotalUf.ToString();
+
+                    }
+                    if (ParsePersonal > 4)
+                    {
+                        var adicional = 0.5;
+                        Double recargoPersonalA = 3.5;
+                        Totalcoffe = adicional * ParsePersonal;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonalA + Totalcenas;
+                        TxtValorTotal.Text = TotalUf.ToString();
+
+                    }
                 }
-                else
+                if (ParseAsistentes >= 21 || ParseAsistentes <= 50)
                 {
-                    int ParseAsistentes = Int16.Parse(TxtAsistentes.Text);
-                    if (ParseAsistentes >= 1 || ParseAsistentes <= 20)
-                    {
-                        Double recargoPersonal = 0;
-                        var recargoCoffe = 3;
-                        int ParsePersonal = Int16.Parse(TxtMasPersonal.Text);
 
-                        if (ParsePersonal == 2)
-                        {
+                    Double recargoPersonal = 0;
+                    var recargoCoffe = 5;
+                    int ParsePersonal = Int16.Parse(TxtMasPersonal.Text);
 
-                            recargoPersonal = 2;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
-                            TxtValorTotal.Text = TotalUf.ToString();
 
-                        }
-                        if (ParsePersonal == 3)
-                        {
-
-                            recargoPersonal = 3;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
-                        if (ParsePersonal == 4)
-                        {
-
-                            recargoPersonal = 3.5;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
-                        if (ParsePersonal > 4)
-                        {
-                            var adicional = 0.5;
-                            Double recargoPersonalA = 3.5;
-                            Totalcoffe = adicional * ParsePersonal;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonalA + Totalcenas;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
-                    }
-                    if (ParseAsistentes >= 21 || ParseAsistentes <= 50)
+                    if (ParsePersonal == 2)
                     {
 
-                        Double recargoPersonal = 0;
-                        var recargoCoffe = 5;
-                        int ParsePersonal = Int16.Parse(TxtMasPersonal.Text);
+                        recargoPersonal = 2;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
+                        TxtValorTotal.Text = TotalUf.ToString();
 
-
-                        if (ParsePersonal == 2)
-                        {
-
-                            recargoPersonal = 2;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
-                        if (ParsePersonal == 3)
-                        {
-
-                            recargoPersonal = 3;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
-                        if (ParsePersonal == 4)
-                        {
-
-                            recargoPersonal = 3.5;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
-                        if (ParsePersonal > 4)
-                        {
-                            var adicional = 0.5;
-                            Double recargoPersonalA = 3.5;
-                            Totalcoffe = adicional * ParsePersonal;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonalA + Totalcenas;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
                     }
-                    if (ParseAsistentes > 50)
+                    if (ParsePersonal == 3)
                     {
-                        Double recargoPersonal = 0;
-                        var recargoCoffe = ParseAsistentes / 2;
-                        int ParsePersonal = Int16.Parse(TxtMasPersonal.Text);
 
+                        recargoPersonal = 3;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
+                        TxtValorTotal.Text = TotalUf.ToString();
 
-                        if (ParsePersonal == 2)
-                        {
-
-                            recargoPersonal = 2;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
-                        if (ParsePersonal == 3)
-                        {
-
-                            recargoPersonal = 3;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
-                        if (ParsePersonal == 4)
-                        {
-
-                            recargoPersonal = 3.5;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
-                        if (ParsePersonal > 4)
-                        {
-                            var adicional = 0.5;
-                            double recargoPersonalA = 3.5;
-                            Totalcoffe = adicional * ParsePersonal;
-                            TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
-                            TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonalA + Totalcenas;
-                            TxtValorTotal.Text = TotalUf.ToString();
-
-                        }
                     }
+                    if (ParsePersonal == 4)
+                    {
+
+                        recargoPersonal = 3.5;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
+                        TxtValorTotal.Text = TotalUf.ToString();
+
+                    }
+                    if (ParsePersonal > 4)
+                    {
+                        var adicional = 0.5;
+                        Double recargoPersonalA = 3.5;
+                        Totalcoffe = adicional * ParsePersonal;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonalA + Totalcenas;
+                        TxtValorTotal.Text = TotalUf.ToString();
+
+                    }
+                }
+                if (ParseAsistentes > 50)
+                {
+                    Double recargoPersonal = 0;
+                    var recargoCoffe = ParseAsistentes / 2;
+                    int ParsePersonal = Int16.Parse(TxtMasPersonal.Text);
+
+
+                    if (ParsePersonal == 2)
+                    {
+
+                        recargoPersonal = 2;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
+                        TxtValorTotal.Text = TotalUf.ToString();
+
+                    }
+                    if (ParsePersonal == 3)
+                    {
+
+                        recargoPersonal = 3;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
+                        TxtValorTotal.Text = TotalUf.ToString();
+
+                    }
+                    if (ParsePersonal == 4)
+                    {
+
+                        recargoPersonal = 3.5;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonal;
+                        TxtValorTotal.Text = TotalUf.ToString();
+
+                    }
+                    if (ParsePersonal > 4)
+                    {
+                        var adicional = 0.5;
+                        double recargoPersonalA = 3.5;
+                        Totalcoffe = adicional * ParsePersonal;
+                        TotalNoUf = coffe + ParseAsistentes + ParsePersonal;
+                        TotalUf = (TotalNoUf * UF) + recargoCoffe + recargoPersonalA + Totalcenas;
+                        TxtValorTotal.Text = TotalUf.ToString();
+
+                      }
+                   }
+
                 }
                 if (BoxEvento.Text == "Cocktail")
                 {
                     int ParseAsistentes = Int16.Parse(TxtAsistentes.Text);
-                    if (ParseAsistentes >= 1 || ParseAsistentes <= 20)
+                      var CocktailForms = new Cocktail();
+                            CocktailForms.ShowDialog();
+                if (ParseAsistentes >= 1 || ParseAsistentes <= 20)
                     {
 
                         var recargoCocktail = 4;
@@ -418,7 +417,7 @@ namespace Presentation
                     }
                     if (ParseAsistentes > 50)
                     {
-                        //int ParsePersonal = Int16.Parse(TxtMasPersonal.Text);  
+                       
 
                         var recargoCocktail = 2 * (ParseAsistentes / 20);
                         int ParsePersonal = Int16.Parse(TxtMasPersonal.Text);
@@ -469,7 +468,9 @@ namespace Presentation
                 if (BoxEvento.Text == "Cenas")
                 {
                     int ParseAsistentes = Int16.Parse(TxtAsistentes.Text);
-                    if (ParseAsistentes >= 1 || ParseAsistentes <= 20)
+                      var CenasForms = new Cenas();
+                          CenasForms.ShowDialog();
+                if (ParseAsistentes >= 1 || ParseAsistentes <= 20)
                     {
 
                         var recargoCenas = 1.5;
@@ -628,7 +629,7 @@ namespace Presentation
 
                     }
                 }
-            }
+            
 
         }
 
