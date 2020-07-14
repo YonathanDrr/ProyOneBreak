@@ -96,8 +96,17 @@ namespace Presentation
 
 
                     cmd.ExecuteNonQuery();
+                   
                     conn.Close();
                     MessageBox.Show("Contrato Registrado correctamente");
+                    
+                   // BoxEvento.Text = string.Empty;
+
+
+                   
+
+                 
+
 
                 }
                 else
@@ -137,6 +146,8 @@ namespace Presentation
                 da = new SqlDataAdapter("ListarContratos", conn);
                 da.Fill(dt);
                 GridContrato.DataSource = dt;
+
+                
                 conn.Close();
 
               
@@ -150,13 +161,15 @@ namespace Presentation
 
         }
 
+
+
         private void ValorContrato() 
         {
             int   coffe  =10;
             int   cocktail = 20;
             int   cenas = 30;
             Double Totalcoffe = 0;
-            Double Totalcocktail = 0;
+           // Double Totalcocktail = 0;
             Double Totalcenas = 0;
 
             Double TotalNoUf = 0;
@@ -169,8 +182,7 @@ namespace Presentation
               {
                 
                 int ParseAsistentes = Int16.Parse(TxtAsistentes.Text);
-                var CoffeForms = new CoffeBreak();
-                        CoffeForms.ShowDialog();
+               
                 if (ParseAsistentes >= 1 || ParseAsistentes <= 20)
                 {
                     Double recargoPersonal = 0;
@@ -311,8 +323,7 @@ namespace Presentation
                 if (BoxEvento.Text == "Cocktail")
                 {
                     int ParseAsistentes = Int16.Parse(TxtAsistentes.Text);
-                      var CocktailForms = new Cocktail();
-                            CocktailForms.ShowDialog();
+                      
                 if (ParseAsistentes >= 1 || ParseAsistentes <= 20)
                     {
 
@@ -468,8 +479,7 @@ namespace Presentation
                 if (BoxEvento.Text == "Cenas")
                 {
                     int ParseAsistentes = Int16.Parse(TxtAsistentes.Text);
-                      var CenasForms = new Cenas();
-                          CenasForms.ShowDialog();
+                      
                 if (ParseAsistentes >= 1 || ParseAsistentes <= 20)
                     {
 
@@ -636,15 +646,12 @@ namespace Presentation
         private void Random() 
         {
 
-
             int random1;
             string l1;
             Random ran = new Random();
             random1 = ran.Next();
             l1 = Convert.ToString(random1);
             TxtNroContrato.Text = l1.ToString();
-       
-
 
         }
 
@@ -658,8 +665,24 @@ namespace Presentation
             ValorContrato();
         }
 
-     
+        private void BtnAdiccional_Click(object sender, EventArgs e)
+        {
+            var CenasForms = new Cenas();
+            CenasForms.ShowDialog();
+        }
 
-      
+        
+
+        private void BtnAdicionalCoffe_Click(object sender, EventArgs e)
+        {
+            var CoffeForms = new CoffeBreak();
+            CoffeForms.ShowDialog();
+        }
+
+        private void BtnAdiccionalCoktail_Click(object sender, EventArgs e)
+        {
+            var CocktailForms = new Cocktail();
+            CocktailForms.ShowDialog();
+        }
     }
 }

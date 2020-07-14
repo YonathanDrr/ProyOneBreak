@@ -33,6 +33,9 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.BoxVegetariana = new System.Windows.Forms.ComboBox();
             this.Vegetariano = new System.Windows.Forms.Label();
+            this.NroContratoCoffe = new System.Windows.Forms.TextBox();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.BtnSalirCoffe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +57,10 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(321, 12);
+            this.btnAdd.Location = new System.Drawing.Point(280, 12);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(177, 42);
+            this.btnAdd.Size = new System.Drawing.Size(96, 42);
             this.btnAdd.TabIndex = 64;
             this.btnAdd.Text = "Agregar";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -69,9 +72,9 @@
             this.BoxVegetariana.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.BoxVegetariana.Location = new System.Drawing.Point(123, 24);
+            this.BoxVegetariana.Location = new System.Drawing.Point(123, 60);
             this.BoxVegetariana.Name = "BoxVegetariana";
-            this.BoxVegetariana.Size = new System.Drawing.Size(56, 21);
+            this.BoxVegetariana.Size = new System.Drawing.Size(53, 21);
             this.BoxVegetariana.TabIndex = 67;
             // 
             // Vegetariano
@@ -79,11 +82,45 @@
             this.Vegetariano.AutoSize = true;
             this.Vegetariano.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Vegetariano.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Vegetariano.Location = new System.Drawing.Point(21, 22);
+            this.Vegetariano.Location = new System.Drawing.Point(21, 61);
             this.Vegetariano.Name = "Vegetariano";
             this.Vegetariano.Size = new System.Drawing.Size(96, 20);
             this.Vegetariano.TabIndex = 68;
             this.Vegetariano.Text = "Vegetariano";
+            // 
+            // NroContratoCoffe
+            // 
+            this.NroContratoCoffe.Location = new System.Drawing.Point(123, 34);
+            this.NroContratoCoffe.Name = "NroContratoCoffe";
+            this.NroContratoCoffe.Size = new System.Drawing.Size(100, 20);
+            this.NroContratoCoffe.TabIndex = 69;
+            this.NroContratoCoffe.TextChanged += new System.EventHandler(this.NroContratoCoffe_TextChanged);
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl1.Location = new System.Drawing.Point(23, 34);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(96, 20);
+            this.lbl1.TabIndex = 70;
+            this.lbl1.Text = "NroContrato";
+            // 
+            // BtnSalirCoffe
+            // 
+            this.BtnSalirCoffe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSalirCoffe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
+            this.BtnSalirCoffe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalirCoffe.ForeColor = System.Drawing.Color.White;
+            this.BtnSalirCoffe.Location = new System.Drawing.Point(402, 12);
+            this.BtnSalirCoffe.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnSalirCoffe.Name = "BtnSalirCoffe";
+            this.BtnSalirCoffe.Size = new System.Drawing.Size(96, 42);
+            this.BtnSalirCoffe.TabIndex = 71;
+            this.BtnSalirCoffe.Text = "Salir";
+            this.BtnSalirCoffe.UseVisualStyleBackColor = false;
+            this.BtnSalirCoffe.Click += new System.EventHandler(this.BtnSalirCoffe_Click);
             // 
             // CoffeBreak
             // 
@@ -91,6 +128,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(67)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(664, 216);
+            this.Controls.Add(this.BtnSalirCoffe);
+            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.NroContratoCoffe);
             this.Controls.Add(this.Vegetariano);
             this.Controls.Add(this.BoxVegetariana);
             this.Controls.Add(this.btnAdd);
@@ -111,5 +151,8 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox BoxVegetariana;
         private System.Windows.Forms.Label Vegetariano;
+        private System.Windows.Forms.TextBox NroContratoCoffe;
+        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Button BtnSalirCoffe;
     }
 }

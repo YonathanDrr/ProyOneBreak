@@ -64,6 +64,9 @@
             this.BtnCalcular = new System.Windows.Forms.Button();
             this.GridContrato = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnAdiccional = new System.Windows.Forms.Button();
+            this.BtnAdiccionalCoktail = new System.Windows.Forms.Button();
+            this.BtnAdicionalCoffe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridContrato)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -114,7 +117,7 @@
             // TxtNroContrato
             // 
             this.TxtNroContrato.Enabled = false;
-            this.TxtNroContrato.Location = new System.Drawing.Point(109, 66);
+            this.TxtNroContrato.Location = new System.Drawing.Point(114, 45);
             this.TxtNroContrato.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.TxtNroContrato.Name = "TxtNroContrato";
             this.TxtNroContrato.ShortcutsEnabled = false;
@@ -154,7 +157,7 @@
             // 
             // TxtAsistentes
             // 
-            this.TxtAsistentes.Location = new System.Drawing.Point(419, 137);
+            this.TxtAsistentes.Location = new System.Drawing.Point(496, 137);
             this.TxtAsistentes.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.TxtAsistentes.MaxLength = 2;
             this.TxtAsistentes.Name = "TxtAsistentes";
@@ -163,7 +166,7 @@
             // 
             // TxtHoraFin
             // 
-            this.TxtHoraFin.Location = new System.Drawing.Point(419, 102);
+            this.TxtHoraFin.Location = new System.Drawing.Point(496, 102);
             this.TxtHoraFin.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.TxtHoraFin.MaxLength = 5;
             this.TxtHoraFin.Name = "TxtHoraFin";
@@ -172,7 +175,7 @@
             // 
             // TxtHoraInicio
             // 
-            this.TxtHoraInicio.Location = new System.Drawing.Point(419, 67);
+            this.TxtHoraInicio.Location = new System.Drawing.Point(496, 67);
             this.TxtHoraInicio.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.TxtHoraInicio.MaxLength = 5;
             this.TxtHoraInicio.Name = "TxtHoraInicio";
@@ -181,7 +184,7 @@
             // 
             // RutClienteContrato
             // 
-            this.RutClienteContrato.Location = new System.Drawing.Point(108, 168);
+            this.RutClienteContrato.Location = new System.Drawing.Point(113, 147);
             this.RutClienteContrato.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.RutClienteContrato.MaxLength = 10;
             this.RutClienteContrato.Name = "RutClienteContrato";
@@ -191,7 +194,7 @@
             // TxtValorTotal
             // 
             this.TxtValorTotal.Enabled = false;
-            this.TxtValorTotal.Location = new System.Drawing.Point(419, 239);
+            this.TxtValorTotal.Location = new System.Drawing.Point(496, 239);
             this.TxtValorTotal.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.TxtValorTotal.Name = "TxtValorTotal";
             this.TxtValorTotal.Size = new System.Drawing.Size(111, 23);
@@ -202,7 +205,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(1, 64);
+            this.label2.Location = new System.Drawing.Point(6, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 20);
             this.label2.TabIndex = 38;
@@ -214,7 +217,7 @@
             this.Fecha.AutoSize = true;
             this.Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Fecha.Location = new System.Drawing.Point(1, 99);
+            this.Fecha.Location = new System.Drawing.Point(6, 78);
             this.Fecha.Name = "Fecha";
             this.Fecha.Size = new System.Drawing.Size(95, 20);
             this.Fecha.TabIndex = 39;
@@ -225,7 +228,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(1, 134);
+            this.label4.Location = new System.Drawing.Point(6, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 20);
             this.label4.TabIndex = 40;
@@ -236,7 +239,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(1, 169);
+            this.label5.Location = new System.Drawing.Point(6, 148);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 20);
             this.label5.TabIndex = 41;
@@ -247,7 +250,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(1, 204);
+            this.label6.Location = new System.Drawing.Point(391, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 20);
             this.label6.TabIndex = 42;
@@ -258,7 +261,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(0, 239);
+            this.label7.Location = new System.Drawing.Point(8, 188);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 20);
             this.label7.TabIndex = 43;
@@ -269,7 +272,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(312, 240);
+            this.label8.Location = new System.Drawing.Point(389, 240);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 20);
             this.label8.TabIndex = 44;
@@ -280,7 +283,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(312, 205);
+            this.label9.Location = new System.Drawing.Point(389, 205);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 20);
             this.label9.TabIndex = 45;
@@ -291,7 +294,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(312, 170);
+            this.label10.Location = new System.Drawing.Point(389, 170);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(104, 20);
             this.label10.TabIndex = 46;
@@ -302,7 +305,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(312, 138);
+            this.label11.Location = new System.Drawing.Point(389, 138);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 20);
             this.label11.TabIndex = 47;
@@ -313,7 +316,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(312, 103);
+            this.label12.Location = new System.Drawing.Point(389, 103);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(82, 20);
             this.label12.TabIndex = 48;
@@ -324,7 +327,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(312, 68);
+            this.label13.Location = new System.Drawing.Point(389, 68);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 20);
             this.label13.TabIndex = 49;
@@ -332,7 +335,7 @@
             // 
             // TxtObservaciones
             // 
-            this.TxtObservaciones.Location = new System.Drawing.Point(722, 205);
+            this.TxtObservaciones.Location = new System.Drawing.Point(722, 217);
             this.TxtObservaciones.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.TxtObservaciones.MaxLength = 150;
             this.TxtObservaciones.Multiline = true;
@@ -345,7 +348,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(593, 205);
+            this.label3.Location = new System.Drawing.Point(718, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 51;
@@ -355,16 +358,16 @@
             // 
             this.BoxModalidad.FormattingEnabled = true;
             this.BoxModalidad.Items.AddRange(new object[] {
+            "Quick Cocktail",
             "Ambient Cocktail",
+            "Ejecutiva",
             "Celebración",
             "Day Break",
-            "Ejecutiva",
             "Light Break",
-            "Journal Break",
-            "Quick Cocktail"});
-            this.BoxModalidad.Location = new System.Drawing.Point(109, 204);
+            "Journal Break"});
+            this.BoxModalidad.Location = new System.Drawing.Point(496, 34);
             this.BoxModalidad.Name = "BoxModalidad";
-            this.BoxModalidad.Size = new System.Drawing.Size(121, 24);
+            this.BoxModalidad.Size = new System.Drawing.Size(111, 24);
             this.BoxModalidad.TabIndex = 52;
             this.BoxModalidad.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -375,9 +378,9 @@
             "Cenas",
             "Cocktail",
             "Coffee Break"});
-            this.BoxEvento.Location = new System.Drawing.Point(109, 239);
+            this.BoxEvento.Location = new System.Drawing.Point(113, 184);
             this.BoxEvento.Name = "BoxEvento";
-            this.BoxEvento.Size = new System.Drawing.Size(121, 24);
+            this.BoxEvento.Size = new System.Drawing.Size(122, 24);
             this.BoxEvento.TabIndex = 53;
             // 
             // BtnGenerar
@@ -386,7 +389,7 @@
             this.BtnGenerar.BackColor = System.Drawing.Color.Gray;
             this.BtnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGenerar.ForeColor = System.Drawing.Color.White;
-            this.BtnGenerar.Location = new System.Drawing.Point(224, 62);
+            this.BtnGenerar.Location = new System.Drawing.Point(224, 42);
             this.BtnGenerar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.BtnGenerar.Name = "BtnGenerar";
             this.BtnGenerar.Size = new System.Drawing.Size(78, 26);
@@ -402,21 +405,21 @@
             "2",
             "3",
             "4"});
-            this.TxtMasPersonal.Location = new System.Drawing.Point(419, 169);
+            this.TxtMasPersonal.Location = new System.Drawing.Point(496, 169);
             this.TxtMasPersonal.Name = "TxtMasPersonal";
             this.TxtMasPersonal.Size = new System.Drawing.Size(111, 24);
             this.TxtMasPersonal.TabIndex = 55;
             // 
             // TimeInicio
             // 
-            this.TimeInicio.Location = new System.Drawing.Point(109, 103);
+            this.TimeInicio.Location = new System.Drawing.Point(114, 82);
             this.TimeInicio.Name = "TimeInicio";
             this.TimeInicio.Size = new System.Drawing.Size(200, 23);
             this.TimeInicio.TabIndex = 56;
             // 
             // TimeFin
             // 
-            this.TimeFin.Location = new System.Drawing.Point(109, 138);
+            this.TimeFin.Location = new System.Drawing.Point(114, 117);
             this.TimeFin.Name = "TimeFin";
             this.TimeFin.Size = new System.Drawing.Size(200, 23);
             this.TimeFin.TabIndex = 57;
@@ -428,7 +431,7 @@
             "Realizado",
             "Aplazado",
             "Rechazado"});
-            this.BoxRealizado.Location = new System.Drawing.Point(419, 204);
+            this.BoxRealizado.Location = new System.Drawing.Point(496, 204);
             this.BoxRealizado.Name = "BoxRealizado";
             this.BoxRealizado.Size = new System.Drawing.Size(111, 24);
             this.BoxRealizado.TabIndex = 58;
@@ -439,7 +442,7 @@
             this.BtnCalcular.BackColor = System.Drawing.Color.Gray;
             this.BtnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCalcular.ForeColor = System.Drawing.Color.White;
-            this.BtnCalcular.Location = new System.Drawing.Point(565, 237);
+            this.BtnCalcular.Location = new System.Drawing.Point(630, 237);
             this.BtnCalcular.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.BtnCalcular.Name = "BtnCalcular";
             this.BtnCalcular.Size = new System.Drawing.Size(78, 26);
@@ -459,7 +462,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(584, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(632, 26);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(81, 56);
@@ -467,12 +470,60 @@
             this.pictureBox1.TabIndex = 61;
             this.pictureBox1.TabStop = false;
             // 
+            // BtnAdiccional
+            // 
+            this.BtnAdiccional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAdiccional.BackColor = System.Drawing.Color.Gray;
+            this.BtnAdiccional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdiccional.ForeColor = System.Drawing.Color.White;
+            this.BtnAdiccional.Location = new System.Drawing.Point(12, 217);
+            this.BtnAdiccional.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnAdiccional.Name = "BtnAdiccional";
+            this.BtnAdiccional.Size = new System.Drawing.Size(140, 26);
+            this.BtnAdiccional.TabIndex = 62;
+            this.BtnAdiccional.Text = "Adicional Cenas";
+            this.BtnAdiccional.UseVisualStyleBackColor = false;
+            this.BtnAdiccional.Click += new System.EventHandler(this.BtnAdiccional_Click);
+            // 
+            // BtnAdiccionalCoktail
+            // 
+            this.BtnAdiccionalCoktail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAdiccionalCoktail.BackColor = System.Drawing.Color.Gray;
+            this.BtnAdiccionalCoktail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdiccionalCoktail.ForeColor = System.Drawing.Color.White;
+            this.BtnAdiccionalCoktail.Location = new System.Drawing.Point(85, 255);
+            this.BtnAdiccionalCoktail.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnAdiccionalCoktail.Name = "BtnAdiccionalCoktail";
+            this.BtnAdiccionalCoktail.Size = new System.Drawing.Size(140, 26);
+            this.BtnAdiccionalCoktail.TabIndex = 63;
+            this.BtnAdiccionalCoktail.Text = "Adicional Coktail";
+            this.BtnAdiccionalCoktail.UseVisualStyleBackColor = false;
+            this.BtnAdiccionalCoktail.Click += new System.EventHandler(this.BtnAdiccionalCoktail_Click);
+            // 
+            // BtnAdicionalCoffe
+            // 
+            this.BtnAdicionalCoffe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAdicionalCoffe.BackColor = System.Drawing.Color.Gray;
+            this.BtnAdicionalCoffe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdicionalCoffe.ForeColor = System.Drawing.Color.White;
+            this.BtnAdicionalCoffe.Location = new System.Drawing.Point(166, 217);
+            this.BtnAdicionalCoffe.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnAdicionalCoffe.Name = "BtnAdicionalCoffe";
+            this.BtnAdicionalCoffe.Size = new System.Drawing.Size(181, 26);
+            this.BtnAdicionalCoffe.TabIndex = 65;
+            this.BtnAdicionalCoffe.Text = "Adicional Coffee Break";
+            this.BtnAdicionalCoffe.UseVisualStyleBackColor = false;
+            this.BtnAdicionalCoffe.Click += new System.EventHandler(this.BtnAdicionalCoffe_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(928, 516);
+            this.Controls.Add(this.BtnAdicionalCoffe);
+            this.Controls.Add(this.BtnAdiccionalCoktail);
+            this.Controls.Add(this.BtnAdiccional);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GridContrato);
             this.Controls.Add(this.BtnCalcular);
@@ -526,7 +577,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.TextBox TxtNroContrato;
         private System.Windows.Forms.Button btnAdd;
         internal System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.TextBox TxtAsistentes;
@@ -558,5 +608,9 @@
         private System.Windows.Forms.Button BtnCalcular;
         private System.Windows.Forms.DataGridView GridContrato;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox TxtNroContrato;
+        private System.Windows.Forms.Button BtnAdiccional;
+        private System.Windows.Forms.Button BtnAdiccionalCoktail;
+        private System.Windows.Forms.Button BtnAdicionalCoffe;
     }
 }
